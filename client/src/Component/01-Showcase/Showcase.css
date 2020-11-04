@@ -1,0 +1,127 @@
+.Showcase {
+  height: calc(100vh - 90px );
+  position: relative;
+  top: 90px;
+  margin-bottom: 90px;
+}
+.Social {
+  position: relative;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.Social::before {
+  position: absolute;
+  content: "";
+  height: 300px;
+  border-right: 1px solid rgba(51, 51, 51, 0.233);
+}
+.Sc-box {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  background: transparent;
+  z-index: 2;
+  background: white;
+}
+
+.Sc-box i {
+  font-size: 1.2rem;
+  padding: 10px;
+  color: var(--social-color);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.Sc-box i:hover {
+  color: #ed1c24;
+}
+
+.Sidebar p {
+  display: flex;
+  flex-flow: center;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 11rem;
+  font-size: 1rem;
+  transform: rotate(90deg);
+  color: var(--social-color);
+}
+
+.Sidebar p i{
+  font-size: 1rem;
+  color: var(--social-color);
+  transform: rotate(-90deg);
+}
+
+.Main-section {
+  position: absolute;
+  width: 100%;
+  background: var(--showcase-img) no-repeat center center/cover;
+  background-attachment: fixed;
+  z-index: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.Main-section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0000003f;
+  z-index: -1;
+}
+.main-section-box {
+  width: 100%;
+  margin: 0px auto;
+  position: relative;
+  top: 0px;
+  height: min-content;
+  /* align-items: center; */
+  /* text-align: center; */
+}
+.main-section-box h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: lighter;
+  color: var(--white-text);
+  /* text-align: center; */
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+  /* font-weight: bold; */
+  
+  text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.767);
+  /* border-top: 1px solid rgb(255, 255, 255); */
+ 
+}
+
+.main-section-box h1::before{
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 10%;
+  height: 3px;
+  background: var(--main-color);
+}
+
+
+
+
+
+
+
+

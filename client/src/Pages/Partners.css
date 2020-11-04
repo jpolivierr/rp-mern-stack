@@ -1,0 +1,8 @@
+.partner-text{
+    margin-top: 50px;
+}
+
+.partner-text h3{
+    font-size: var(--h3-size);
+    padding-bottom: 10px;
+}

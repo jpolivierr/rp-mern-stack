@@ -1,0 +1,37 @@
+body {
+  --showcase-img: url(./Images/Main-house.jpg);
+  --transparent: #d9d9d94b;
+  --main-color: #ed1c24;
+  --social-color: rgb(131, 131, 131);
+  --white-text: white;
+  --text-color: rgb(87, 87, 87);
+  --nav-border: rgba(173, 173, 173, 0.267);
+  --off-white: #f8f7f7;
+  --h3-color: black;
+  --h3-size: 1.6rem;
+  --h2-size: 2.5rem;
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: 'Lato', sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8rem;
+}
+
+.container {
+  width: 75%;
+  margin: 0px auto;
+  /* border: 1px solid green; */
+}
+
+li{
+  list-style: none;
+}
+
+

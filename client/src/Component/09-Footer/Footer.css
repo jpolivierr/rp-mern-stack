@@ -1,0 +1,66 @@
+.Footer{
+    height: 60vh;
+    background: rgba(0, 0, 0, 0.925);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Footer-box{
+    display: flex; 
+    justify-content: space-evenly;
+}
+.Footer-box h3{
+    font-size: var(--h3-size);
+    padding-bottom: 20px;
+    color: rgba(255, 255, 255, 0.616);
+    text-transform: uppercase;
+}
+
+.Footer-box ul li{
+    list-style: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.Footer-box .newsLetter form{
+    padding: 0px 0px 10px 0px ;
+}
+.Footer-box .newsLetter form input{
+    padding: 6px;
+    border: none;
+    margin-bottom: 10px;
+    background: transparent;
+    border: solid 1px rgba(255, 255, 255, 0.192);
+}
+
+.Footer-box .newsLetter form  ::placeholder{
+    color: white;
+}
+
+.Footer-box .newsLetter form{
+    display: flex;
+    flex-flow: column;
+}
+
+.bottom-footer{
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    height: 80px;
+    background: rgb(10, 10, 10);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bf-box{
+   
+    height: 100%;
+    font-size: .7rem;
+   
+    text-align: center;
+    color: white;
+    line-height: 1rem;
+}

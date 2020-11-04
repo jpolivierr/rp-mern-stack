@@ -1,0 +1,117 @@
+.WhatWeDo{
+    /* width: calc(100vw - 150px);
+    margin-left: 150px; */
+   
+    height: min-content;
+    padding: 80px 0px 150px 0px;
+    position: relative;
+}
+.W-bkg{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ bottom: 0;
+
+ filter: grayscale(100%);
+ background-attachment: fixed;
+ z-index: -1;
+}
+
+
+.WhatWeDo-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+ 
+    /* background: white; */
+    gap: 40px;
+}
+
+.box{
+    position: relative;
+    height: min-content;
+    /* min-width: 350px; */
+    /* border: 1px solid red; */
+}
+
+.sec-title{
+  display: flex;
+  padding-left: 40px;
+  
+}
+
+.box-img{
+    width: 100%;
+    height: 250px;
+    background: silver;
+    /* box-shadow: 0px 0px 25px 0px rgba(36, 36, 36, 0.219) ; */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+
+.box-img::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.062);
+}
+
+.box h3{
+    font-size: var(--h3-size);
+    color: var(--h3-color);
+    padding-top: 35px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.box p{
+    color: var(--text-color);
+    padding: 35px 0px 5px 0px ;
+    /* border: 1px solid red; */
+}
+.link {
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.link i{
+   color: red;
+   font-size: .6rem;
+}
+
+.buy-img{
+    background: url(../../Images/happy-asian.jpg) no-repeat center center/cover;
+}
+.sell-img{
+    background: url(../../Images/sell-2.jpg) no-repeat center center/cover;
+}
+.work-img{
+    background: url(../../Images/woman-in-business.jpg) no-repeat center center/cover;
+}
+.workwithus{
+    position: relative;
+    
+}
+.work-img{
+    position: relative;
+}
+
+.box-img p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-color);
+    color: white;z-index: 2;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39); */
+
+}

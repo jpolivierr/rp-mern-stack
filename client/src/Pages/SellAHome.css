@@ -1,0 +1,28 @@
+.sellAHome p{
+    position: relative;
+    /* border: 1px solid green; */
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    column-gap: 20px;
+}
+
+
+.sellAHome span{
+ background: var(--main-color);
+ color: white;
+ font-size: 2rem;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ /* position: absolute; */;
+}
+
+.sellAHome .sell-texts{
+margin-top: 50px;
+}
+
+.sell-page{
+    padding-bottom: 3px;
+}
