@@ -76,3 +76,10 @@
 .contact-box form .message{
     grid-column: 1 /span 2;
 }
+
+.danger{
+    border: 1px solid red !important ;
+}
+.danger::placeholder{
+    color: red !important ;
+}

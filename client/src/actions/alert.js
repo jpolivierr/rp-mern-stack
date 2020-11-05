@@ -1,24 +1,29 @@
 import { SET_ALERT, REMOVE_ALERT } from "./types"
-import uuid from "uuid"
+import {v4 as uuidv4} from "uuid"
 
 export const setAlert = (errors, alertType) => (dispatch) => {
   //   const id = uuid.v4()
-  const msgArray = []
-  msgArray.shift()
+  const errArray = []
   errors.forEach((err) => {
     const errStyle = {}
     errStyle.param = err.param
     errStyle.msg = err.msg
-    msgArray.push(errStyle)
+    errStyle.alertType = alertType
+    errStyle.id = uuidv4()
+    errArray.push(errStyle)
   })
 
-  dispatch(
+dispatch(
     {
     type: SET_ALERT,
-    payload: {
-      msg: msgArray,
-      alertType,
-      //   id,
-    },
+    payload: errArray
+  })
+  
+}
+
+export const removeAlert = () => (dispatch) => {
+  dispatch({
+    type: REMOVE_ALERT,
+    payload: []
   })
 }
