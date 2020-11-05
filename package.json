@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd BackEnd && npm start",
+    "start": "cd BackEnd && npm run start",
     "client": "cd client && npm run start",
     "server": "cd BackEnd && npm run server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install cd client && npm run build cd client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install cd client && npm run build cd client"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/jpolivierr/rp-mern-stack#readme",
   "dependencies": {
     "concurrent": "^0.3.2",
-    "concurrently": "^5.3.0"
+    "concurrently": "^5.3.0",
+    "mongoose": "^5.10.12"
   }
 }
