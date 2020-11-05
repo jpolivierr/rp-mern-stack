@@ -65,10 +65,10 @@ class Contact extends Component {
 
   render() {
     // console.log(this.props.alerts)
-    const alerts = this.props.alerts[0]
-    const cstyle = ""
+    // const alerts = this.props.alerts[0]
+    // const cstyle = ""
     // console.log(alerts)
-    const addAlerts = () => {}
+    // const addAlerts = () => {}
     return (
       <div className="Contact">
         <div className="C-bkg"></div>

@@ -67,9 +67,9 @@
 
     border-bottom: black;
 }
-.contact-box form .lName{
+/* .contact-box form .lName{
     
-}
+} */
 .contact-box form .email{
     grid-column: 1 /span 2;
 }
