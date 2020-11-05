@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd BackEnd && npm start",
     "client": "cd client && npm run start",
     "server": "cd BackEnd && npm run server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
