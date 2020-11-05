@@ -2,9 +2,9 @@
   "name": "rp",
   "version": "1.0.0",
   "description": "rp bakcend",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "server": "nodemon server",
     "client": "(cd client && npm run start)",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
