@@ -23,7 +23,7 @@ import './SectionTitle.css'
         <div style={ScStyle} className={props.scstyle}>
           
             <div className="number">
-               {props.number}
+               {/* {props.number} */}
             </div>
              <h3 className={`${props.theclass}`}>{props.subTitle}</h3>
              <h2 style={titleStyle}>{props.Title}</h2>

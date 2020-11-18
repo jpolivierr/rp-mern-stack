@@ -1,4 +1,5 @@
 @media (min-width: 1606px) {
+  /* ********************************************************************************* 1606px */
   .container {
     width: 65%;
   }
@@ -15,10 +16,36 @@
   .container {
     width: 90%;
   }
+  .Search div:nth-child(6),
+  .Search div:nth-child(7) {
+    display: none;
+  }
+  .Search {
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  }
 }
-
+@media (max-width: 1185px) {
+  /* ********************************************************************************* 1185 */
+  .Navigation {
+    height: 8vh;
+  }
+  .Showcase {
+    height: calc(80vh - 12vh);
+  }
+  .main-section-box h1 {
+    font-size: 1.8rem;
+  }
+  .Search div:nth-child(6),
+  .Search div:nth-child(7) {
+    display: none;
+  }
+  .Search {
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
+}
 @media (max-width: 1090px) {
-  /* ---------------------------------------------- Navigation */
+  /* ********************************************************************************* 1090px */
+  /* ------------------------------------------------------------------------ Navigation */
   .Nav-links {
     position: relative;
   }
@@ -32,11 +59,9 @@
     margin: auto;
     min-width: 115px;
   }
-
   .Nav-links .links {
     display: none;
   }
-
   .socials {
     width: 100%;
     height: 100%;
@@ -55,17 +80,129 @@
     width: 5%;
     height: 100%;
   }
-
-  .socials li:nth-last-child(1){
+  .socials li:nth-last-child(1) {
     display: none;
   }
-
   .lines {
     min-width: 25px;
     height: 2.5px;
     background: rgba(0, 0, 0, 0.616);
-    --width-line: 60%
+    --width-line: 60%;
+  }
+  /* ------------------------------------------------------------------------ Showcase */
+
+  /*-------------------------------------------------------------------- about section */
+  .AboutUs-main-section {
+    width: var(--width);
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 7rem 0px; */
+  }
+  .AboutUs {
+    padding: 6% 0px;
+  }
+  .AboutUs-main-section p {
+    border: none;
+    text-align: center;
+    margin-top: 3%;
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .AboutUs-main-section p span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Sc-title {
+    width: min-content;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .Sc-title h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    height: min-content;
+  }
+  .Sc-title h2::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: var(--main-color);
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .Sc-title h3 {
+    font-size: 0.8rem;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: normal;
+    margin: 0;
+    padding: 0;
+  }
+  .Sc-title h3::after {
+    display: none;
+  }
+}
+
+@media (max-width: 870px) {
+  /* ********************************************************************************* 870 */
+  .Navigation {
+    height: 8vh;
+  }
+  .Showcase {
+    height: calc(80vh - 12vh);
+  }
+  .main-section-box h1 {
+    font-size: 1.8rem;
+  }
+  .Search div:nth-child(4),
+  .Search div:nth-child(5) {
+    display: none;
+  }
+  .Search div:nth-child(6),
+  .Search div:nth-child(7) {
+    display: none;
+  }
+  .Search {
+    grid-template-columns: 2fr 2fr;
+  }
+  .Sc-title h2 {
+    font-size: 1.5rem;
+  }
+  .Sc-title h3 {
+    font-size: .7rem;
+  }
+}
+@media (max-width: 594px) {
+  /* ********************************************************************************* 594 */
+  /* -----------------------------------------------------------------------------------------------------Showcase */
+  .Showcase {
+    height: calc(70vh - 12vh);
   }
 
-
+  .main-section-box h1 {
+    font-size: 1.3rem;
+  }
+  /* -----------------------------------------------------------------------------------------------------search section */
+  .Search {
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  .Search h2 {
+    text-align: left;
+    padding-bottom: 1%;
+  }
 }

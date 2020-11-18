@@ -1,14 +1,10 @@
 .AboutUs{
-    /* width: calc(100vw - 150px);
-  margin-left: 150px; */
     position: relative;
-    /*   */
     width: 100%;
     height: min-content;
-    padding: 80px 0px 80px 0px;
-    /* z-index: 1; */
     background: url(../../Images/white-background.jpg) no-repeat center top/cover;
-    background-attachment: fixed;
+    padding: 6% 0px;
+    /* background-attachment: fixed; */
     z-index: 0;
 }
 .AboutUs::before{
@@ -17,29 +13,30 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.76);
+    background: rgba(255, 255, 255, 0.651);
    z-index: -1;
   }
 .AboutUs-main-section{
-    /* border: 1px solid red; */
-    width: 100%;
+    width: var(--width);
+    margin: auto;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding: 7rem 0px; */
 }
 
 .AboutUs-main-section p{
-    
+    border-left: 1px solid silver;
     margin-left: 40px;
-    margin-right: 10px;
+    padding-left: 40px;
+    width: 60%;
 }
 
 .AboutUs-main-section p span{
     display: flex;
     align-items: center;
     font-weight: bold;
-   
 }
 
 .AboutUs-main-section p span i{

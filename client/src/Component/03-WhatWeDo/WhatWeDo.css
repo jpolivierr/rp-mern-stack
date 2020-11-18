@@ -1,117 +1,117 @@
-.WhatWeDo{
-    /* width: calc(100vw - 150px);
-    margin-left: 150px; */
-   
-    height: min-content;
-    padding: 80px 0px 150px 0px;
-    position: relative;
-}
-.W-bkg{
- position: absolute;
- width: 100%;
- height: 100%;
- bottom: 0;
-
- filter: grayscale(100%);
- background-attachment: fixed;
- z-index: -1;
+.WhatWeDo {
+  height: min-content;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6% 0px ;
 }
 
-
-.WhatWeDo-box{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+.WhatWeDo-box {
+  width: var(--width);
  
-    /* background: white; */
-    gap: 40px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 30.3%);
+  justify-content: space-between;
+  /* gap: 50px; */
+  height: min-content;
 }
 
-.box{
-    position: relative;
-    height: min-content;
-    /* min-width: 350px; */
-    /* border: 1px solid red; */
+.box {
+  position: relative;
+  height: min-content;
+  /* min-width: 350px; */
+ 
 }
 
-.sec-title{
+.sec-title {
   display: flex;
   padding-left: 40px;
-  
 }
 
-.box-img{
-    width: 100%;
-    height: 250px;
-    background: silver;
-    /* box-shadow: 0px 0px 25px 0px rgba(36, 36, 36, 0.219) ; */
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+.box-img {
+  width: 100%;
+  height: 270px;
+  background: silver;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: 0;
 }
-
-
-
-.box-img::before{
+.box-img p {
     position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  color: white !important;
+  z-index: -7;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 3% 5% !important;
+  margin: 0 !important;
+  height: min-content !important;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39);
+  bottom: 15px;
+  left: -10px;
+}
+.box-img p::before{
     content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.062);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(155, 2, 2);
+    left: 0;
+    bottom: -10px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    z-index: -8;
+}
+.box-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.062);
 }
 
-.box h3{
-    font-size: var(--h3-size);
-    color: var(--h3-color);
-    padding-top: 35px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
+.box h3 {
+  font-size: 1.5rem;
+  color: var(--h3-color);
+  margin-top: 35px;
+  /* padding-top: 35px;
+  padding-bottom: 10px; */
 }
-.box p{
-    color: var(--text-color);
-    padding: 35px 0px 5px 0px ;
-    /* border: 1px solid red; */
+.box p {
+  color: var(--text-color);
+  margin: 20px 0px 15px 0px;
+  height: 20%;
 }
 .link {
-    font-weight: bold;
-    color: black;
-    display: flex;
-    align-items: center;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
 }
-.link i{
-   color: red;
-   font-size: .6rem;
-}
-
-.buy-img{
-    background: url(../../Images/happy-asian.jpg) no-repeat center center/cover;
-}
-.sell-img{
-    background: url(../../Images/sell-2.jpg) no-repeat center center/cover;
-}
-.work-img{
-    background: url(../../Images/woman-in-business.jpg) no-repeat center center/cover;
-}
-.workwithus{
-    position: relative;
-    
-}
-.work-img{
-    position: relative;
+.link i {
+  color: red;
+  font-size: 0.6rem;
 }
 
-.box-img p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-color);
-    color: white;z-index: 2;
-    padding: 5px 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 10px;
-    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39); */
-
+.buy-img {
+  background: url(../../Images/happy-asian.jpg) no-repeat center center/cover;
+}
+.sell-img {
+  background: url(../../Images/sell-2.jpg) no-repeat center center/cover;
+}
+.work-img {
+  background: url(../../Images/woman-in-business.jpg) no-repeat center
+    center/cover;
+}
+.workwithus {
+  position: relative;
+}
+.work-img {
+  position: relative;
 }
