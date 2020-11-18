@@ -1,5 +1,5 @@
 .Navigation {
-  position: fixed;
+  /* position: fixed; */
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.329) 17%,
@@ -7,7 +7,7 @@
     rgba(0, 0, 0, 0) 100%
   );
   background: rgb(255, 255, 255);
-  height: 90px;
+  height: 12vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -16,40 +16,35 @@
 }
 
 .Logo2 {
-  background: url(../../Images/Logo\ Edited.png) no-repeat center center/ cover;
+  /* background: url(../../Images/Logo\ Edited.png) no-repeat center center/ cover; */
   background: rgba(255, 255, 255, 0);
-  width: 160px;
-  height: 60px;
+  width: 15%;
+  height: 100%;
   cursor: pointer;
   left: 0px;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
-}
-.logoimg2 {
-  width: 130px;
-  height: 50px;
-  background: url(../../Images/Logo\ Edited.png) no-repeat center center/ cover;
-}
-.Nav-box {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  border: 1px solid red;
 }
 
+
 .Nav-links {
-  /* border: 1px solid red; */
   height: 100%;
-  width: 100%;
+  width: var(--width);
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.Nav-links {
-  height: 100px;
+
+
+.logoimg2 {
+  width: 15%;
+  height: 60%;
+  background: url(../../Images/Logo\ Edited.png) no-repeat center center/ contain;
+  cursor: pointer;
 }
 
 .Navigation .links {
@@ -59,12 +54,11 @@
   cursor: pointer;
   list-style: none;
   color: var(--text-color);
-  text-transform: uppercase;
-  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  font-weight: bold;
   position: relative;
   padding: 5px 0px;
-  margin: 0px 10px;
-  font-size: 0.9rem;
+  margin: 0px 20px;
 }
 .links li::before {
   position: absolute;
@@ -81,71 +75,68 @@
 }
 
 .socials {
+  width: 15%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
+  
 }
 
 .socials li {
   border-right: 1px solid var(--nav-border);
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
-  height: 100%;
   position: relative;
   z-index: 4;
-}
-.socials li:nth-child(1) {
-  /* border-left: 1px solid var(--nav-border); */
+  
+  width: 33.3%;
+  height: 100%;
 }
 .socials li i {
-  /* border: 1px solid red; */
-  padding: 0px 20px;
-  font-size: 1rem;
   color: var(--main-color);
 }
 
 .Menuebars {
-  /* border: 1px solid red; */
-  right: 0;
-  height: 80px;
   width: min-content;
   background: white;
   display: flex;
   flex-flow: column;
   justify-content: center;
-  align-items: flex-end;
-  /* border: 1px solid red; */
+  align-items: center;
+  
   position: relative;
-  padding: 25px 20px 0px 0px;
+  width: 100%;
+  height: 100%; 
 }
 
 .lines {
-  width: 95%;
-  height: 2px;
+  width: 100%;
+  height: 2.5px;
   background: rgba(0, 0, 0, 0.616);
-}
-.line1 {
-  width: 80%;
-  position: relative;
-  top: 5px;
+  --width-line: 60%
 }
 .line2 {
+  width: var(--width-line);
   position: relative;
-  top: -3px;
 }
-.line3 {
-  width: 75%;
-  position: relative;
-  top: -11px;
+.line2::before{
+  position: absolute;
+  content: '';
+  width: 60%;
+  height: 100%;
+  top: 7px;
+  background: inherit;
 }
-
-.menuetext {
-  text-transform: none;
-  padding-top: 0px;
-  font-size: 0.8rem;
+.line2::after{
+  position: absolute;
+  content: '';
+  width: 90%;
+  height: 100%;
+  bottom: 7px;
+  background: inherit;
 }
 
 .li-phone:hover .drop-box {

@@ -51,7 +51,7 @@ import {Link} from 'react-router-dom'
             <div className="bottom-footer">
                 <div className="container">
                     <div className="Bf-box">
-                    Copyright© 2020. The Oppenheim Group. All rights reserved. | Terms of Use | Sitemap Real Estate Internet Marketing <br/>by Agent Image
+                    Copyright© 2020. All rights reserved. | Terms of Use | Sitemap Real Estate Internet Marketing <br/>
 Privacy Policy | Dont Sell My Personal Information
                     </div>
                 </div>

@@ -36,7 +36,7 @@ function Button(props) {
         case 'advance':
             return (
         <button className='btn advanced'>
-           Advanced
+           SEARCH
         </button>
     )
        default : 
