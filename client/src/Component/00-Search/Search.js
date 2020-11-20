@@ -2,7 +2,7 @@ import React from "react"
 import Button from "../../Util/Button/Button"
 import "./Search.css"
 
-export default function Search() {
+export default function Search(props) {
     
     const prices = [
         '$10,000',
@@ -29,8 +29,8 @@ export default function Search() {
     )})
 
   return (
-    <div className="Search">
-      <h2>Quick Search</h2>
+    <div className= {`Search ${props.onPageSearch}`}>
+      <h2>Quick Property Search</h2>
       <input type="text" placeholder="City/Zip" />
       <div className="custom-select">
         <select name="" id="">
@@ -64,6 +64,11 @@ export default function Search() {
           <option value="1">MAX.price</option>
           {displayPrices}
         </select>
+      </div>
+      <div className="custom-select filter">
+      
+        <i class="fas fa-filter"></i> Filter
+        
       </div>
 
       <Button type="advance" />

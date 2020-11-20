@@ -3,6 +3,7 @@ import PageHeader from "../Component/00-PageHeader/PageHeader"
 import Specialty from "../Component/06-Specialty/Specialty"
 import Contact from "../Component/08-Contact/Contact"
 import Property from "../Component/00-Properties/Properties"
+import Search from '../Component/00-Search/Search'
 import { Link } from "react-router-dom"
 import Button from "../Util/Button/Button"
 
@@ -19,8 +20,7 @@ class Listings extends Component {
         <PageHeader label="view our properties" />
         <div className="Listing">
           <div className="Listing-box">
-            <div className="L-title"></div>
-
+            <Search onPageSearch = 'on-Page-Search'/>
             <div className="Properties">
               <Property
                 img="img1"

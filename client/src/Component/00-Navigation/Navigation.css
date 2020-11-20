@@ -40,11 +40,9 @@
   cursor: pointer;
   list-style: none;
   color: var(--text-color);
-  /* text-transform: uppercase; */
-  font-weight: bold;
   position: relative;
   padding: 5px 0px;
-  margin: 0px 20px;
+  margin: 0px 1.2em;
 }
 .links li::before {
   position: absolute;

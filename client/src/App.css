@@ -23,12 +23,18 @@
   body {
     --width: 90%;
   }
-
+  /* ------------------------------------------------------------------------ Search */
+  .custom-select.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* ------------------------------------------------------------------------------ Show Case */
   .Showcase {
     height: calc(90vh - 12vh);
   }
   .main-section-box h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .Search div:nth-child(6),
   .Search div:nth-child(7) {
@@ -48,19 +54,21 @@
     }
   }
 }
-@media(max-width: 1219px){
+@media (max-width: 1219px) {
   .box p {
-
     height: 30%;
-    
   }
 }
 @media (max-width: 1090px) {
   /* ********************************************************************************* 1090px */
+  /* ------------------------------------------------------------------------ Search */
+  .Search h2 {
+    font-size: 1.2rem;
+  }
   /* ------------------------------------------------------------------------ Navigation */
-  .Sides-Menue{
+  .Sides-Menue {
     width: 50%;
-}
+  }
   .Nav-links {
     position: relative;
   }
@@ -105,7 +113,9 @@
     --width-line: 60%;
   }
   /* ------------------------------------------------------------------------ Showcase */
-
+  .main-section-box h1 {
+    font-size: 1.5rem;
+  }
   /*-------------------------------------------------------------------- about section */
   .AboutUs-main-section {
     width: var(--width);
@@ -169,27 +179,27 @@
     margin: 0;
     padding: 0;
   }
-  .sp-box-content h3{
+  .sp-box-content h3 {
     font-size: 1.3rem !important;
   }
   .Sc-title h3::after {
     display: none;
   }
 
-  .about-page-main{
+  .about-page-main {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
   }
-  .about-text-section{
+  .about-text-section {
     text-align: center;
     display: flex;
     flex-flow: column;
     align-items: center;
     padding: 0% 0% 10% 0px;
   }
-  .about-page-main form{
+  .about-page-main form {
     width: 100%;
     margin-bottom: 5%;
   }
@@ -239,7 +249,7 @@
     border: 1px solid green;
   }
   /* -----------------------------------------------------------------------------------------------------Our Partners */
-  .Partner{
+  .Partner {
     display: none;
   }
   /* -----------------------------------------------------------------------------------------------------Our Specialty */
@@ -267,12 +277,12 @@
     /* border: 1px solid red; */
   }
   /* ----------------------------------------------------------------------------------------------------- Footer */
-  .Footer-box{
+  .Footer-box {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     align-items: center;
   }
-  .F{
+  .F {
     text-align: center;
   }
 }
@@ -281,10 +291,10 @@
   /* ********************************************************************************* 870 */
 
   .Showcase {
-    height: calc(80vh - 12vh);
+    height: calc(100vh - 12vh);
   }
   .main-section-box h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .Search div:nth-child(4),
   .Search div:nth-child(5) {
@@ -341,23 +351,22 @@
     gap: 20px;
   }
   .contact-box form input:nth-child(1),
-  .contact-box form input:nth-child(2)
-  {
-    grid-column: 1 /span 2;
+  .contact-box form input:nth-child(2) {
+    grid-column: 1 / span 2;
   }
 }
 @media (max-width: 594px) {
   /* ********************************************************************************* 594 */
   /* -----------------------------------------------------------------------------------------------------About Us Section */
-  .Sides-Menue{
+  .Sides-Menue {
     width: 90%;
-}
+  }
   .AboutUs {
     display: none;
   }
   /* -----------------------------------------------------------------------------------------------------Showcase */
   .Showcase {
-    height: calc(70vh - 12vh);
+    height: calc(100vh - 12vh);
   }
 
   .main-section-box h1 {
@@ -365,9 +374,39 @@
   }
   /* -----------------------------------------------------------------------------------------------------search section */
   .Search {
-    grid-template-columns: 1fr;
+    position: relative;
+    width: 100%;
+    height: min-content;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr !important  ;
+    align-items: center;
+    justify-content: center;
+  }
+  .Search h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .custom-select.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    height: 40px;
+    width: 90%;
+  }
+  .Search .btn {
+    width: 90%;
+    place-self: center;
+  }
+
+  .Search input:nth-child(2),
+  .Search div:nth-child(3) {
     display: none;
   }
+
   .Search h2 {
     text-align: left;
     padding-bottom: 1%;
