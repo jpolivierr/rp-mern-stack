@@ -39,7 +39,6 @@ export function Aboutuspage() {
   return (
     <div className="aboutuspage">
       <PageHeader label="about us" />
-      <div className="container">
         <div className="about-page-main">
           <div className="about-text-section">
             <SectionTitle
@@ -101,7 +100,7 @@ export function Aboutuspage() {
             </div>
           </form>
         </div>
-      </div>
+     
     </div>
   )
 }

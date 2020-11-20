@@ -62,7 +62,7 @@ class WhatWeDo extends Component {
                 Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum
                 dolor sit amet consectetur adipisicing elit. Voluptatem ad
                 consectetur adipisicing elitconsectetur adipisicing elit sit
-                amet consectetur adipisicing <br />
+                amet consectetur  <br />
               </p>
               <Link to="/partners" style={{ textDecoration: "none" }}>
                 <span className="link">

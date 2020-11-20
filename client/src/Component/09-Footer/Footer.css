@@ -1,16 +1,18 @@
 .Footer{
-    height: 60vh;
     background: rgba(0, 0, 0, 0.925);
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 5% 0px;
 }
 
 .Footer-box{
+    width: var(--width);
     display: flex; 
     justify-content: space-evenly;
+    /* border: 1px solid red; */
 }
 .Footer-box h3{
     font-size: var(--h3-size);
@@ -59,8 +61,10 @@
    
     height: 100%;
     font-size: .7rem;
-   
     text-align: center;
     color: white;
     line-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

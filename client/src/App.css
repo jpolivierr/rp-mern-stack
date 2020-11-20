@@ -1,36 +1,31 @@
-@media (min-width: 1606px) {
+@media (min-width: 1800px) {
   /* ********************************************************************************* 1606px */
-  .container {
-    width: 65%;
+  body {
+    --width: 1400px;
+  }
+  * {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1506px) {
+  /* ********************************************************************************* 1606px */
+  body {
+    --width: 80%;
   }
 }
 @media (max-width: 1340px) {
   body {
+    --width: 80%;
+  }
+}
+@media (max-width: 1260px) {
+  /* ********************************************************************************* 1260 */
+  body {
     --width: 90%;
   }
-  .container {
-    width: 85%;
-  }
-}
-@media (max-width: 1116px) {
-  .container {
-    width: 90%;
-  }
-  .Search div:nth-child(6),
-  .Search div:nth-child(7) {
-    display: none;
-  }
-  .Search {
-    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-  }
-}
-@media (max-width: 1185px) {
-  /* ********************************************************************************* 1185 */
-  .Navigation {
-    height: 8vh;
-  }
+
   .Showcase {
-    height: calc(80vh - 12vh);
+    height: calc(90vh - 12vh);
   }
   .main-section-box h1 {
     font-size: 1.8rem;
@@ -42,10 +37,30 @@
   .Search {
     grid-template-columns: 2fr 2fr 1fr 1fr;
   }
+
+  @media (max-width: 1116px) {
+    .Search div:nth-child(6),
+    .Search div:nth-child(7) {
+      display: none;
+    }
+    .Search {
+      grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    }
+  }
+}
+@media(max-width: 1219px){
+  .box p {
+
+    height: 30%;
+    
+  }
 }
 @media (max-width: 1090px) {
   /* ********************************************************************************* 1090px */
   /* ------------------------------------------------------------------------ Navigation */
+  .Sides-Menue{
+    width: 50%;
+}
   .Nav-links {
     position: relative;
   }
@@ -125,10 +140,12 @@
     text-align: center;
   }
   .Sc-title h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    line-height: 150%;
     margin: 0;
     padding: 0;
     height: min-content;
+    width: 300px;
   }
   .Sc-title h2::before {
     position: absolute;
@@ -152,16 +169,117 @@
     margin: 0;
     padding: 0;
   }
+  .sp-box-content h3{
+    font-size: 1.3rem !important;
+  }
   .Sc-title h3::after {
     display: none;
+  }
+
+  .about-page-main{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-text-section{
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0% 0% 10% 0px;
+  }
+  .about-page-main form{
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  /*-------------------------------------------------------------------- What We Do Section */
+  .WhatWeDo-box {
+    width: var(--width);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(3, 32.3%);
+    justify-content: center;
+    row-gap: 50px;
+    height: min-content;
+  }
+
+  .box p {
+    color: var(--text-color);
+    margin: 20px 0px 15px 0px;
+    height: min-content;
+  }
+  /*-------------------------------------------------------------------- Why work with us */
+  .WhyUs {
+    padding: 5% 0px;
+  }
+  .WhyUs-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+  }
+  .W-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+  }
+  .W-c p {
+    padding: 8% 0px !important;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .W-img-box {
+    display: none;
+    border: 1px solid green;
+  }
+  /* -----------------------------------------------------------------------------------------------------Our Partners */
+  .Partner{
+    display: none;
+  }
+  /* -----------------------------------------------------------------------------------------------------Our Specialty */
+  .Sp-details {
+    display: flex;
+    flex-flow: column;
+    row-gap: 100px;
+    align-items: center;
+  }
+  .Sp-box {
+    width: 500px;
+  }
+  /* ----------------------------------------------------------------------------------------------------- Properties Listings */
+  .Properties {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    /* flex-flow: row wrap;
+    justify-content: space-between; */
+    margin: 7% 0px;
+    /* border: 1px solid red; */
+  }
+  /* ----------------------------------------------------------------------------------------------------- Footer */
+  .Footer-box{
+    display: grid;
+    grid-template-columns: 1fr ;
+    align-items: center;
+  }
+  .F{
+    text-align: center;
   }
 }
 
 @media (max-width: 870px) {
   /* ********************************************************************************* 870 */
-  .Navigation {
-    height: 8vh;
-  }
+
   .Showcase {
     height: calc(80vh - 12vh);
   }
@@ -183,11 +301,60 @@
     font-size: 1.5rem;
   }
   .Sc-title h3 {
-    font-size: .7rem;
+    font-size: 0.7rem;
+  }
+  /* -----------------------------------------------------------------------------------------------------Our Partners */
+  .Partner-box {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .Partner-box p {
+    text-align: center;
+  }
+  .Partner-photos {
+    margin-top: 50px;
+    display: grid;
+    width: 100%;
+    height: 500px !important;
+  }
+  .Partner-content {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .Properties div:nth-child(4),
+  .Properties div:nth-child(5) {
+    display: none;
+  }
+
+  .contact-box {
+    width: 80%;
+  }
+  .contact-box form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* margin: 50px 0px 50px 0px; */
+    gap: 20px;
+  }
+  .contact-box form input:nth-child(1),
+  .contact-box form input:nth-child(2)
+  {
+    grid-column: 1 /span 2;
   }
 }
 @media (max-width: 594px) {
   /* ********************************************************************************* 594 */
+  /* -----------------------------------------------------------------------------------------------------About Us Section */
+  .Sides-Menue{
+    width: 90%;
+}
+  .AboutUs {
+    display: none;
+  }
   /* -----------------------------------------------------------------------------------------------------Showcase */
   .Showcase {
     height: calc(70vh - 12vh);
@@ -204,5 +371,69 @@
   .Search h2 {
     text-align: left;
     padding-bottom: 1%;
+  }
+
+  /* -----------------------------------------------------------------------------------------------------What We Do section */
+  .WhatWeDo-box {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 32.3%);
+  }
+  /* -----------------------------------------------------------------------------------------------------Why work with us */
+  .WhyUs-box {
+    width: var(--width);
+  }
+  /* -----------------------------------------------------------------------------------------------------Our Partners */
+  .Partner-box {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .Partner-box p {
+    text-align: center;
+  }
+  .Partner-photos {
+    display: none;
+    margin-top: 50px;
+    width: 90%;
+    height: 500px;
+  }
+  .Partner-content {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  /* -----------------------------------------------------------------------------------------------------Our Specialty */
+  .Sp-details {
+    margin-top: 10%;
+    display: flex;
+    flex-flow: column;
+    row-gap: 100px;
+    align-items: center;
+  }
+  .Sp-box {
+    width: var(--width);
+  }
+
+  /* ----------------------------------------------------------------------------------------------------- Properties Listings */
+  .Properties {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    /* flex-flow: row wrap;
+    justify-content: space-between; */
+    margin: 7% 0px;
+    /* border: 1px solid red; */
+  }
+
+  .Properties div:nth-child(3),
+  .Properties div:nth-child(4),
+  .Properties div:nth-child(5) {
+    display: none;
   }
 }

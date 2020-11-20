@@ -1,6 +1,8 @@
 .Showcase {
-  height: calc(100vh - 12vh);
+  height: calc(100vh - 10vh);
   position: relative;
+  top: 10vh;
+  margin-bottom: 10vh;
   background: var(--showcase-img) no-repeat center center/cover;
 }
 .Showcase::before {
@@ -8,7 +10,7 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: #0000005e;
+  background: #00000073;
 }
 .main-section-box {
   width: var(--width);
@@ -22,14 +24,14 @@
   align-items: center;
 }
 .main-section-box h1 {
-  letter-spacing: .3rem;
+  letter-spacing: .2rem;
   position: relative;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  line-height: 160%;
+  font-size: 1.8rem;
+  line-height: 130%;
   font-weight: lighter;
   color: var(--white-text);
   text-align: center;
@@ -38,7 +40,7 @@
   width: 100%;
   margin: auto 0px ;
   padding: 20px 0px;
-  /* font-weight: bold; */
+  font-weight: bold;
   text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.767);
   /* border-top: 1px solid rgb(255, 255, 255); */
 }

@@ -59,7 +59,7 @@ class Contact extends Component {
       this.props.removeAlert()
       this.props.setAlert(errors, "Danger")
       const alerts = this.props.alerts[0]
-      console.log(alerts.filter(alert => alert.param === 'fname'))
+      console.log(alerts.filter((alert) => alert.param === "fname"))
     }
   }
 
@@ -72,62 +72,61 @@ class Contact extends Component {
     return (
       <div className="Contact">
         <div className="C-bkg"></div>
-        <div className="container">
-          <div className="contact-box">
-            <SectionTitle
-              scstyle="Sc-title Sc-title-center Tcwhite"
-              color="white"
-              dw=""
-              number="06"
-              subTitle="Contact"
-              Title="CONTACT US"
-              titleWidth="100%"
-            />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              perspiciatis deleniti dignissimos!.
-            </p>
-            <form onSubmit={(e) => this.onSubmit(e)}>
-              <input
-                onChange={(e) => this.formInputs(e)}
-                type="text"
-                id="fName"
-                className={`${"danger"}`}
-                placeholder={`${"danger"}`}
-              />
-              <input
-                onChange={(e) => this.formInputs(e)}
-                type="text"
-                id="lName"
-                className="lName"
-                placeholder="Last Name"
-              />
-              <input
-                onChange={(e) => this.formInputs(e)}
-                type="email"
-                id="email"
-                className="email"
-                placeholder="Email"
-              />
-              <input
-                onChange={(e) => this.formInputs(e)}
-                type="text"
-                id="message"
-                className="message"
-                placeholder="Message"
-              />
 
-              <Button
-                type="submit"
-                label="submit"
-                color="white"
-                backcolor="var(--main-color)"
-                onClick={(e) => {
-                  this.onSubmit(e)
-                }}
-              />
-            </form>
-          </div>
+        <div className="contact-box">
+          <SectionTitle
+            scstyle="Sc-title Sc-title-center Tcwhite"
+            color="white"
+            dw=""
+            number="06"
+            subTitle=""
+            Title="CONTACT US"
+            titleWidth="100%"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            perspiciatis deleniti dignissimos!.
+          </p>
+          <form onSubmit={(e) => this.onSubmit(e)}>
+            <input
+              onChange={(e) => this.formInputs(e)}
+              type="text"
+              id="fName"
+              className={`${"danger"}`}
+              placeholder={`${"danger"}`}
+            />
+            <input
+              onChange={(e) => this.formInputs(e)}
+              type="text"
+              id="lName"
+              className="lName"
+              placeholder="Last Name"
+            />
+            <input
+              onChange={(e) => this.formInputs(e)}
+              type="email"
+              id="email"
+              className="email"
+              placeholder="Email"
+            />
+            <input
+              onChange={(e) => this.formInputs(e)}
+              type="text"
+              id="message"
+              className="message"
+              placeholder="Message"
+            />
+
+            <Button
+              type="submit"
+              label="submit"
+              color="white"
+              backcolor="var(--main-color)"
+              onClick={(e) => {
+                this.onSubmit(e)
+              }}
+            />
+          </form>
         </div>
       </div>
     )

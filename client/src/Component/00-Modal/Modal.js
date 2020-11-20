@@ -30,12 +30,12 @@ class Modal extends Component {
                 <div className= "close" 
                 //  onClick={()=>{this.props.closemodal(false)}}
                 >+</div>
-                 <div className="Logo2 Logo2-menue">
-                   <Link to='/' >
-                       <div className="logoimg2 logoimg2-menue">
+                 <div className="logoimg2 logoimg2-menue">
                    </div>
-                   </Link>
-                </div> 
+                   {/* <Link to='/' style={{width: '100%', height:'100%', position: 'absolute'}} >
+                      
+                   </Link> */}
+             
 
                 <h1>Navigation</h1>
                 <ul className="side-nav">

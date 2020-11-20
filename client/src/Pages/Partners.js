@@ -22,7 +22,7 @@ import { Component } from 'react'
         <div>
            <PageHeader label='our partners'/>
            <div className='aboutuspage'>
-            <div className="container">
+           
                     <div className="about-page-main">
                    <div className="about-text-section">
                    <SectionTitle
@@ -82,7 +82,7 @@ business and having a professional team by their side.
                        </form>
                     </div>
               
-            </div>
+           
             
         </div>
             <Contact/>

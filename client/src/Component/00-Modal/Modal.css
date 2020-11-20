@@ -1,177 +1,147 @@
-.Modal{
-    position: fixed;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.644);
-    z-index: 5;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    animation: open .5s ease ;
+.Modal {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.644);
+  z-index: 5;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  animation: open 0.5s ease;
 }
 
-.M-close{
-    animation: close .5s ease forwards ;
+.M-close {
+  animation: close 0.5s ease forwards;
 }
 
-@keyframes open{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@keyframes close{
-    from{
-       
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
+@keyframes close {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .close {
-    position: absolute;
-    color: var(--text-color);
-    font-size: 2.5rem;
-    left: 10px;
-    top: 5px;
-    transform: rotate(45deg);
-    cursor: pointer;
-    padding: 10px;
+  position: absolute;
+  color: var(--text-color);
+  font-size: 2.2rem;
+  left: 10px;
+  top: -1%;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
-.Sides-Menue{
-    position: absolute;
-    right: 0;
-    background: white;
-    width: 30%;
-    height: 100%;
-    z-index: 10;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    animation: slide .5s ease ;
+.Sides-Menue {
+  position: absolute;
+  right: 0;
+  background: white;
+  width: 30%;
+  height: 100%;
+  z-index: 10;
+  display: flex !important;
+  flex-flow: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: slide 0.5s ease;
 }
-.Sides-Menue-close{
-    animation: close-slide .5s ease forwards ;
+.Sides-Menue-close {
+  animation: close-slide 0.5s ease forwards;
 }
-@keyframes slide{
-    from{
-       right: -300px;
-    }
-    to{
-        right: 0px;
-    }
+@keyframes slide {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0px;
+  }
 }
-@keyframes close-slide{
-    from{
-       right: 0px;
-       opacity: 1;
-    }
-    to{
-        right: -300px;
-        opacity: 0;
-    }
-}
-
-.Sides-Menue h1{
-    padding-bottom: 10px;
-    font-size: var(--h3-size);
-    /* text-transform: uppercase; */
+@keyframes close-slide {
+  from {
+    right: 0px;
+    opacity: 1;
+  }
+  to {
+    right: -300px;
+    opacity: 0;
+  }
 }
 
-.Sides-Menue ul{
-    text-align: center;
-    margin-bottom: 10%;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+.Sides-Menue h1 {
+  padding-bottom: 10px;
 }
 
-/* .Sides-Menue-close ul li{
-    color: var(--text-color);
-    padding: 5px 0px;
-    border-bottom: 1px solid rgba(192, 192, 192, 0.432);
-    width: 70%;
-    cursor: pointer;
-    transition: background .1s ease;
-    text-transform: uppercase;
-} */
-
-/* .Sides-Menue ul li{
-    color: var(--text-color);
-    padding: 5px 0px;
-    border-bottom: 1px solid rgba(192, 192, 192, 0.432);
-    width: 70%;
-    cursor: pointer;
-    transition: background .1s ease;
-    text-transform: uppercase;
-} */
-
-.Sides-Menue ul .lilink{
-    color: var(--text-color);
-    padding: 7px 0px;
-    border-bottom: 1px solid rgba(192, 192, 192, 0.432);
-    width: 70%;
-    cursor: pointer;
-    transition: all .2s ease;
-    text-transform: uppercase;
-    text-decoration: none;
+.Sides-Menue ul {
+  text-align: center;
+  margin-bottom: 5%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-.Sides-Menue ul .lilink:hover{
-    background: var(--main-color);
-    color: white;
+.Sides-Menue ul .lilink {
+  color: var(--text-color);
+  padding: 7px 0px;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.432);
+  width: 70%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.Logo2-menue{
-    background: url(../../Images/Logo\ Edited.png) no-repeat center center/ cover;
-    background: rgba(255, 255, 255, 0);
-    width: 250px;
-    height: 80px;
-    cursor: pointer;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
+.Sides-Menue ul .lilink li,
+.side-contact li {
+  font-size: 0.8rem !important;
 }
 
-.logoimg2-menue{
-    width: 180px;
-    height: 70px;
+.Sides-Menue ul .lilink:hover {
+  background: var(--main-color);
+  color: white;
 }
 
-.Sides-Menue .side-social{
-    display: flex;
-    flex-flow: row;
-    align-items: flex-start;
-
+.logoimg2.logoimg2-menue {
+  position: relative !important;
+  width: 30% !important;
+  height: 10% !important;
+  background: url(../../Images/Logo\ Edited.png) no-repeat center center/
+    contain;
+  cursor: pointer!important ;
+  margin: 0 ;
+  margin-bottom: 3% !important;
 }
 
-.side-social i{
-    color: var(--main-color);
-    font-size: 1.3rem;
-    width: 35px;
-    height: 35px;
-    border: 1px solid rgba(192, 192, 192, 0.801);
-    border-radius: 50%;
-    padding: 10px;
-    margin: 10px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background .1s ease;
+.Sides-Menue .side-social {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
 }
 
-.side-social i:hover{
-    background: var(--main-color);
-    color: white;
-    border: 1px solid var(--main-color);
+.side-social i {
+  color: var(--main-color);
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(192, 192, 192, 0.801);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.side-social i:hover {
+  background: var(--main-color);
+  color: white;
+  border: 1px solid var(--main-color);
 }
