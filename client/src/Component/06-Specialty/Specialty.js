@@ -1,7 +1,7 @@
 import React from "react"
 import "./Specialty.css"
 import SectionTitle from "../../Util/SectionTitle/SectionTitle"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 export default function Specialty() {
   return (

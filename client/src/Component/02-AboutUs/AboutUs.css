@@ -42,22 +42,26 @@
 .AboutUs-main-section p span i{
     display: flex;
     align-items: center;
-    
+}
+.aboutuspage{
+    height: min-content;
 }
 
 .about-page-main{
     width: var(--width);
     margin: auto;
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1.2fr 1.2fr;
     column-gap: 40px;
     padding: 5% 0%;
+    z-index:5;
+    height: min-content;
     
 }
 
 .about-text-section p{
     grid-column: 1;
-    padding-top: 50px;
+    padding-top: 5%;
 }
 
 .about-page-main form{

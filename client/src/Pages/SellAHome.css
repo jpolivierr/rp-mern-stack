@@ -1,7 +1,17 @@
 .about-text-section{
     padding: 0;
 }
-
+.about-page-main.sell-page form{
+    position: relative;
+}
+.about-page-main.sell-page form .serverMsg{
+    bottom: -10px;
+}
+.about-page-main.sell-page form input{
+    border:none;
+    border-bottom: 1px solid silver;
+    padding: 2% 10px;
+}
 .sellAHome p{
     position: relative;
     /* border: 1px solid green; */

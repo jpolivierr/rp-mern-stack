@@ -45,7 +45,7 @@
 }
 
 .contact-box form{
-    
+    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -73,7 +73,7 @@
 /* .contact-box form .lName{
     
 } */
-.contact-box form .email{
+.contact-box form input:nth-child(3){
     grid-column: 1 /span 2;
 }
 .contact-box form .message{
@@ -85,4 +85,16 @@
 }
 .danger::placeholder{
     color: red !important ;
+}
+
+.serverMsg{
+    position: absolute;
+    bottom: -15%;
+    width: 100%;
+    color: green;
+    border: 1px solid green;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
 }

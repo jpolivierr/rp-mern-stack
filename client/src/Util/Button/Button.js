@@ -35,7 +35,8 @@ function Button(props) {
     )
         case 'advance':
             return (
-        <button className='btn advanced'>
+        <button onClick = {props.clicked} className={`btn advanced ${props.loaderbk}`}>
+            {props.loader}
            SEARCH
         </button>
     )

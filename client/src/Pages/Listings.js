@@ -2,11 +2,10 @@ import React, { Component } from "react"
 import PageHeader from "../Component/00-PageHeader/PageHeader"
 import Specialty from "../Component/06-Specialty/Specialty"
 import Contact from "../Component/08-Contact/Contact"
-import Property from "../Component/00-Properties/Properties"
-import Search from '../Component/00-Search/Search'
+import ListingBox from "../Component/00-ListingBox/ListingBox"
+import Search from "../Component/00-Search/Search"
 import { Link } from "react-router-dom"
 import Button from "../Util/Button/Button"
-
 class Listings extends Component {
   componentDidMount() {
     const scroll = () => {
@@ -17,50 +16,11 @@ class Listings extends Component {
   render() {
     return (
       <div>
-        <PageHeader label="view our properties" />
+        <PageHeader label=" properties" />
         <div className="Listing">
           <div className="Listing-box">
-            <Search onPageSearch = 'on-Page-Search'/>
-            <div className="Properties">
-              <Property
-                img="img1"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-              <Property
-                img="img3"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-
-              <Property
-                img="img2"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-              <Property
-                img="img1"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-              <Property
-                img="img3"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-
-              <Property
-                img="img2"
-                price="$250,000"
-                address=" 145 nw 13th CT Miami, FL, 33167"
-                detail="23,000sq | 3 Bed | 3 Bath"
-              />
-            </div>
+            <Search onPageSearch="on-Page-Search" />
+            <ListingBox />
             <Link style={{ textDecoration: "none" }} to="/listings">
               <Button
                 type="main"
@@ -80,4 +40,5 @@ class Listings extends Component {
     )
   }
 }
+
 export default Listings

@@ -14,9 +14,10 @@ import "./App.css"
 
 // Redux
 import { Provider } from "react-redux"
-import store from "./store"
+import store from "./reduxStuff/store"
 
 class App extends Component {
+ 
   state = {
     modal: false,
     navbar: false,
@@ -40,7 +41,7 @@ class App extends Component {
   render() {
     // window.addEventListener('scroll', this.changeNav )
     return (
-      <Provider store ={store}>
+      <Provider store={store}>
         <Router>
           <div>
             {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}

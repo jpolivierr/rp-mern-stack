@@ -8,11 +8,15 @@ const ClientSchema = new Schema({
   },
   lname: {
     type: String,
-    required: false,
+    required: true,
   },
   email: {
     type: String,
     required: true,
+  },
+  phone: {
+    type: String,
+    required: false,
   },
   message: {
     type: String,

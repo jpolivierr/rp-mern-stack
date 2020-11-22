@@ -2,9 +2,13 @@ import React from 'react'
 import './Properties.css'
 
 export default function Properties(props) {
+     const styleimg ={
+        background: `url(${props.img}) no-repeat center center/cover`
+     }
+
     return (
         <div className="Property-box">
-        <div className={`Property-img ${props.img}`}>
+        <div className={`Property-img`} style={styleimg}>
         </div>
           <div className="P-content">
         <div className='L-price'>{props.price}</div>

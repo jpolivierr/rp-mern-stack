@@ -89,6 +89,7 @@
   border-bottom: 1px solid silver;
   padding: 0;
   padding-bottom: 3%;
+  margin: 2% 0%;
 }
 
 .Search.on-Page-Search::before {
@@ -100,6 +101,7 @@
 }
 .Search.on-Page-Search input {
   border: 1px solid silver;
+  color: var(--text-color);
 }
 .Search.on-Page-Search input::placeholder {
   color: var(--text-color);
@@ -124,9 +126,16 @@
   color: black;
 }
 
+.Search.on-Page-Search .custom-select.filter {
+  color: var(--text-color);
+}
+.Search.on-Page-Search .custom-select.filter i {
+  color: var(--text-color);
+}
+
 .custom-select.filter {
-  width: 90%; 
-    height: 100%;
+  width: 90%;
+  height: 100%;
   padding: 0;
   border: none;
   color: white;
@@ -140,7 +149,6 @@
   transition: all 0.3s ease;
   font-weight: bold;
   margin-right: 12%;
- 
 }
 .custom-select.filter:hover {
   background-color: white;

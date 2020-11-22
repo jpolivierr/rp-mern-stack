@@ -4,7 +4,7 @@ import Button from "../../Util/Button/Button"
 import SectionTitle from "../../Util/SectionTitle/SectionTitle"
 import axios from "axios"
 import { connect } from "react-redux"
-import { setAlert, removeAlert } from "../../actions/alert"
+import { setAlert, removeAlert } from "../../reduxStuff/actions/alert"
 
 class Contact extends Component {
   state = {
@@ -19,10 +19,10 @@ class Contact extends Component {
     const value = e.target.value
 
     switch (e.target.id) {
-      case "fName":
+      case "fname":
         this.setState({ fname: value })
         break
-      case "lName":
+      case "lname":
         this.setState({ lname: value })
         break
       case "email":
@@ -38,41 +38,63 @@ class Contact extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault()
-    // console.log((e.target.children[0].className = ""))
-    const classes = e.target.children
-    // console.log(classes)
-    // console.log(this.props.alerts)
-    for (let i = 0; i < classes.length; i++) {
-      // console.log(classes[i].id)
+    const classes = e.target.childNodes
+    const body = JSON.stringify(this.state)
+    const config = {
+      headers: { "Content-Type": "application/json" },
     }
-    // classes.forEach(classes => console.log(classes.clallName))
-    // console.log("fired...")
-    try {
-      const config = {
-        headers: { "Content-Type": "application/json" },
+
+    classes.forEach((child) => {
+      if (child.id === "fname") {
+        child.className = ""
+        child.placeholder = 'First Name'
+      }else if(child.id === "lname"){
+        child.className = ""
+        child.placeholder = 'Last Name'
+      }else if(child.id === "email"){
+        child.className = ""
+        child.placeholder = 'Email'
       }
-      const body = JSON.stringify(this.state)
+    })
+
+    try {
       const res = await axios.post("/client", body, config)
-      console.log(res.data)
+      if (res.data) {
+        classes.forEach((child) => {
+          if (child.id === "serverMsg") {
+            child.className = "serverMsg"
+            child.innerHTML = res.data.success_message
+            this.setState({
+              ...this.state,
+              fname: "",
+              lname: "",
+              email: "",
+              message: "",
+            })
+            setTimeout(() => {
+              child.className = ""
+              child.innerHTML = ""
+            }, 10000)
+          }
+        })
+      }
     } catch (err) {
       const errors = err.response.data.errors
-      this.props.removeAlert()
-      this.props.setAlert(errors, "Danger")
-      const alerts = this.props.alerts[0]
-      console.log(alerts.filter((alert) => alert.param === "fname"))
+      classes.forEach((child) => {
+        errors.forEach((err) => {
+          if (err.param === child.id) {
+            child.placeholder = err.msg
+            child.className = "danger"
+          }
+        })
+      })
     }
   }
 
   render() {
-    // console.log(this.props.alerts)
-    // const alerts = this.props.alerts[0]
-    // const cstyle = ""
-    // console.log(alerts)
-    // const addAlerts = () => {}
     return (
       <div className="Contact">
         <div className="C-bkg"></div>
-
         <div className="contact-box">
           <SectionTitle
             scstyle="Sc-title Sc-title-center Tcwhite"
@@ -91,23 +113,26 @@ class Contact extends Component {
             <input
               onChange={(e) => this.formInputs(e)}
               type="text"
-              id="fName"
-              className={`${"danger"}`}
-              placeholder={`${"danger"}`}
+              id="fname"
+              className=""
+              placeholder="First Name"
+              value={this.state.fname}
             />
             <input
               onChange={(e) => this.formInputs(e)}
               type="text"
-              id="lName"
-              className="lName"
+              id="lname"
+              className=""
               placeholder="Last Name"
+              value={this.state.lname}
             />
             <input
               onChange={(e) => this.formInputs(e)}
               type="email"
               id="email"
-              className="email"
+              className=""
               placeholder="Email"
+              value={this.state.email}
             />
             <input
               onChange={(e) => this.formInputs(e)}
@@ -115,6 +140,7 @@ class Contact extends Component {
               id="message"
               className="message"
               placeholder="Message"
+              value={this.state.message}
             />
 
             <Button
@@ -126,6 +152,7 @@ class Contact extends Component {
                 this.onSubmit(e)
               }}
             />
+            <div id="serverMsg" className=""></div>
           </form>
         </div>
       </div>
