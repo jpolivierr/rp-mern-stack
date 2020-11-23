@@ -7,23 +7,34 @@ import { Component } from "react"
 import { loading } from "../../reduxStuff/actions/loading"
 
 class Search extends Component {
+  state = {
+    cityOrZipcode: "",
+    propertyType: "",
+    beds: "",
+    baths: "",
+    minPrice: "",
+    maxPrice: "",
+  }
   clicked() {
     console.log("fired..")
     this.props.setloading(true)
   }
 
   render() {
-    const getListings = async () => {
+    const getListings = () => {
       this.props.setloading(true)
-      console.log("fired")
-      try {
-        const res = await axios.get("/properties/")
-        console.log(res.data.listings)
-        localStorage.setItem("listings", JSON.stringify(res.data.listings))
-        this.props.setloading(false)
-      } catch (error) {
-        console.log(error)
+      const config = {
+        headers: {"Content-Type":"application/json"}
       }
+      const body = JSON.stringify(this.state)
+      console.log(body)
+      axios
+        .post("/properties",body,config)
+        .then((res) => {
+          localStorage.setItem("listings", JSON.stringify(res.data.listings))
+          this.props.setloading(false)
+        })
+        .catch((err) => console.log(err))
     }
 
     const prices = [
@@ -38,20 +49,19 @@ class Search extends Component {
       "$90,000",
       "$100,000",
     ]
-    const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, "10+"]
+    const number = [1, 2, 3, 4, 5, 6, 7, 8, "10+"]
     const loading = this.props.loading.loading
-    console.log(loading)
-
+    // console.log(this.state)
     const displayNumber = number.map((number) => {
       return (
-        <option key={number} value="1">
+        <option key={number} value={number}>
           {number}
         </option>
       )
     })
     const displayPrices = prices.map((price) => {
       return (
-        <option key={price} value="1">
+        <option key={price} value={price}>
           {price}
         </option>
       )
@@ -60,36 +70,42 @@ class Search extends Component {
     return (
       <div className={`Search ${this.props.onPageSearch}`}>
         <h2>Quick Property Search</h2>
-        <input type="text" placeholder="City/Zip" />
+        <input type="text" placeholder=" City/Zip" onChange={(e)=> this.setState({...this.state,cityOrZipcode: e.target.value})} />
         <div className="custom-select">
-          <select name="" id="">
+          <select
+            name=""
+            id=""
+            value="1"
+            onChange={(e) => this.setState({...this.state, propertyType: e.target.value})}
+          >
             <option value="1">Property Type</option>
-            <option value="1">Condo</option>
-            <option value="1">House</option>
-            <option value="1">Multi-Family</option>
+            <option value="Condo">Condo</option>
+            <option value="Single_Family">Single_Family</option>
+            <option value="Multi_Family">Multi_Family</option>
+            <option value="Mobile">Mobile</option>
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="">
-            <option value="1">Bedrooms</option>
+          <select name="" id="" value="0" onChange={(e) => this.setState({...this.state, beds: e.target.value})}>
+            <option>Bedrooms</option>
             {displayNumber}
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="">
+          <select name="" id="" onChange={(e) => this.setState({...this.state, baths: e.target.value})}>
             <option value="1">Bathrooms</option>
             {displayNumber}
           </select>
         </div>
 
         <div className="custom-select">
-          <select name="" id="">
+          <select name="" id="" onChange={(e) => this.setState({...this.state, minPrice: e.target.value})}>
             <option value="1">MIN.price</option>
             {displayPrices}
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="">
+          <select name="" id="" onChange={(e) => this.setState({...this.state, maxPrice: e.target.value})} >
             <option value="1">MAX.price</option>
             {displayPrices}
           </select>

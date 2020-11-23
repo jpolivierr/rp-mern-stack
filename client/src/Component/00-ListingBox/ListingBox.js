@@ -7,24 +7,29 @@ import "./ListingBox.css"
 
 class ListingBox extends Component {
   componentDidMount() {
-    console.log("fired")
-    axios
-      .get("/demo")
-      .then((res) => {
-        localStorage.setItem("listings", JSON.stringify(res.data))
-      })
-      .then(() => {
-        const propertyInfo = JSON.parse(localStorage.getItem("listings"))
-        this.setState({ ...this.state, listings: propertyInfo })
-      })
-      .catch((err) => console.log(err))
+    if (localStorage.getItem("listings") === null) {
+
+      console.log("fired from didMount")
+      axios
+        .get("/demo")
+        .then((res) => {
+          localStorage.setItem("listings", JSON.stringify(res.data))
+        })
+        .then(() => {
+          const propertyInfo = JSON.parse(localStorage.getItem("listings"))
+          this.setState({ ...this.state, listings: propertyInfo })
+        })
+        .catch((err) => console.log(err))
+    } else {
+      return null
+    }
   }
   state = {
     listings: [],
   }
 
   render() {
-    const listings = this.state.listings
+    const listings = JSON.parse(localStorage.getItem("listings")) === null ? this.state.listings : JSON.parse(localStorage.getItem("listings"))
     const loading = this.props.loading
     const properties = listings.map((listings) => {
       const address = listings.address_new.line
