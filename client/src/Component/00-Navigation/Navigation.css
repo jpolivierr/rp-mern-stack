@@ -28,34 +28,37 @@
 
 .logoimg2 {
   width: 18%;
-  height: 65%;
+  height: 55%;
   background: url(../../Images/Logo\ Edited.png) no-repeat center center/ contain;
   cursor: pointer;
+  
 }
 
-.Navigation .links {
+.Navigation .links  {
   display: flex;
+  /* border: 1px solid red; */
+  position: relative;
 }
 .Navigation .links li {
   cursor: pointer;
   list-style: none;
   color: var(--text-color);
   position: relative;
-  padding: 5px 0px;
-  margin: 0px 1.2em;
+  padding: 0px 1.8rem;
+  /* margin: 0px 2.5em; */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8rem;
+  border-left: 1px solid rgb(199, 198, 198);
+  transition: all .2s ease;
 }
-.links li::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: var(--main-color);
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
+
+.Navigation .links .active{
+  border-left: none;
 }
-.Navigation .links li:hover::before {
-  width: 100%;
+
+.Navigation .links li:hover{
+  color: var(--main-color);
 }
 
 .socials {
@@ -68,7 +71,7 @@
 }
 
 .socials li {
-  border-right: 1px solid var(--nav-border);
+  /* border-right: 1px solid var(--nav-border); */
   display: flex;
   justify-content: center;
   align-items: center;

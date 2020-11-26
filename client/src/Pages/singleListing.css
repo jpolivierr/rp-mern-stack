@@ -1,0 +1,26 @@
+.single-listing{
+    width: var(--width);
+    height: min-content;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-listing-img{
+    width: 50%;
+    height: 400px;
+}
+
+.single-listing-info{
+    font-size: 1rem;
+    width: 50%;
+    padding: 1% 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.single-listing-info span{
+    font-weight: bold;
+}

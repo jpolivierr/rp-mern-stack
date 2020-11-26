@@ -2,6 +2,8 @@ import React from "react"
 import "./Navigation.css"
 import { Link } from "react-router-dom"
 import { Component } from "react"
+import {withRouter} from 'react-router-dom'
+import Home from '../../Pages/Home'
 
 class Navigation extends Component {
   state = {
@@ -15,16 +17,20 @@ class Navigation extends Component {
   //         this.setState({navbar: false})
   //     }
   // }
+
+  handleClick = () =>{
+    this.props.history.push('/')
+  }
   render() {
     //  window.addEventListener('scroll', this.changeNav )
     return (
       <div className={`Navigation ${this.props.Position}`}>
         <div className="Nav-links ">
-            <div className="logoimg2">
-          <Link to="/">
-            
-          </Link>
+         
+             <div className="logoimg2" onClick={()=> this.handleClick()}>
                   </div>
+         
+         
           <ul className="links">
             <Link style={{ textDecoration: "none" }} to="/">
               <li className="active"> Home </li>
@@ -55,7 +61,6 @@ class Navigation extends Component {
                 }}
               >
                 <div className="lines line2"></div>
-
                 {/* <div className="menuetext">Menue</div> */}
               </div>
             </li>
@@ -76,4 +81,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation
+export default withRouter(Navigation) 

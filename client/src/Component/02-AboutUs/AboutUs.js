@@ -10,7 +10,7 @@ function Aboutus() {
     <div className="AboutUs">
       <div className="AboutUs-main-section">
         <SectionTitle
-          scstyle="Sc-title"
+          scstyle="Sc-title sc-about"
           number="01"
           subTitle="Our Mission"
           Title="ABOUT US"

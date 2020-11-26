@@ -1,8 +1,9 @@
 .Showcase {
-  height: calc(100vh - 10vh);
+  /* height: calc(100vh - 10vh); */
+  height: 100vh;
   position: relative;
-  top: 10vh;
-  margin-bottom: 10vh;
+  /* top: 10vh; */
+  /* margin-bottom: 10vh; */
   background: var(--showcase-img) no-repeat center center/cover;
 }
 .Showcase::before {
@@ -24,14 +25,15 @@
   align-items: center;
 }
 .main-section-box h1 {
-  letter-spacing: .2rem;
+  letter-spacing: .3rem;
   position: relative;
+  top: 8%;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
-  line-height: 130%;
+  font-size: 1.5rem;
+  line-height: 150%;
   font-weight: lighter;
   color: var(--white-text);
   text-align: center;
@@ -41,8 +43,6 @@
   margin: auto 0px ;
   padding: 20px 0px;
   font-weight: bold;
-  text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.767);
-  /* border-top: 1px solid rgb(255, 255, 255); */
 }
 
 .main-section-box h1::before {

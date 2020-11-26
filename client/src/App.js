@@ -4,6 +4,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom"
 import Home from "./Pages/Home"
 import Aboutus from "./Pages/Aboutus"
 import Listings from "./Pages/Listings"
+import SingleListing from './Pages/singleListing'
 import Partners from "./Pages/Partners"
 import SellAHome from "./Pages/SellAHome"
 import Contact from "./Pages/Contact"
@@ -53,6 +54,7 @@ class App extends Component {
               <Route path="/partners" exact component={Partners} />
               <Route path="/sellahome" exact component={SellAHome} />
               <Route path="/contact" exact component={Contact} />
+              <Route path="/singleListing/:id" exact component={SingleListing} />
               <Route
                 path="/facebook"
                 exact

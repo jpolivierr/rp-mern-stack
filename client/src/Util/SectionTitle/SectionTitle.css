@@ -5,6 +5,9 @@
   width: 280px;
   line-height: 50% !important; 
 }
+.Sc-title.sc-about{
+  width: 17%;
+}
 .Sc-title.Sc-title-center {
   display: flex;
   justify-content: center;

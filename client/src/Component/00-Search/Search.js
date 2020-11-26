@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import "./Search.css"
 import { Component } from "react"
 import { loading } from "../../reduxStuff/actions/loading"
+import {withRouter} from 'react-router-dom'
 
 class Search extends Component {
   state = {
@@ -14,28 +15,45 @@ class Search extends Component {
     baths: "",
     minPrice: "",
     maxPrice: "",
-  }
-  clicked() {
-    console.log("fired..")
-    this.props.setloading(true)
+    cs_error: "",
+    noResultError:''
   }
 
-  render() {
-    const getListings = () => {
+  handleClick = () =>{
+    this.props.history.push('/properties')
+  }
+
+getListings = () => {
+      this.setState({...this.state , cs_error: '' })
       this.props.setloading(true)
       const config = {
-        headers: {"Content-Type":"application/json"}
+        headers: { "Content-Type": "application/json" },
       }
       const body = JSON.stringify(this.state)
-      console.log(body)
       axios
-        .post("/properties",body,config)
+        .post("/properties", body, config)
         .then((res) => {
-          localStorage.setItem("listings", JSON.stringify(res.data.listings))
+          this.handleClick()
+          if(res.data.listings.length === 0){
+              this.setState({...this.state, noResultError: 'No Result Found. Please try a different search'})
+              this.props.setloading(false)
+          }else{
+            localStorage.setItem("listings", JSON.stringify(res.data.listings))
+          this.props.setloading(false)
+          }
+          
+        })
+        .catch((err) => {
+          if (err.response.data.errorType === 1) {
+            this.setState({...this.state , cs_error: 'cs-error' })
+          }
+          console.log(err)
           this.props.setloading(false)
         })
-        .catch((err) => console.log(err))
     }
+
+
+  render() {
 
     const prices = [
       "$10,000",
@@ -48,10 +66,18 @@ class Search extends Component {
       "$80,000",
       "$90,000",
       "$100,000",
+      "$200,000",
+      "$300,000",
+      "$400,000",
+      "$500,000",
+      "$600,000",
+      "$700,000",
+      "$800,000",
+      "$900,000",
+      "$1000,000",
     ]
-    const number = [1, 2, 3, 4, 5, 6, 7, 8, "10+"]
+    const number = [1, 2, 3, 4, 5, 6, 7, 8, 10]
     const loading = this.props.loading.loading
-    // console.log(this.state)
     const displayNumber = number.map((number) => {
       return (
         <option key={number} value={number}>
@@ -66,19 +92,30 @@ class Search extends Component {
         </option>
       )
     })
-
+    
     return (
       <div className={`Search ${this.props.onPageSearch}`}>
+        <div className="noResult">
+          {this.state.noResultError}
+        </div>
         <h2>Quick Property Search</h2>
-        <input type="text" placeholder=" City/Zip" onChange={(e)=> this.setState({...this.state,cityOrZipcode: e.target.value})} />
+        <input
+          type="text"
+          placeholder="Enter Your City"
+          onChange={(e) =>
+            this.setState({ ...this.state, cityOrZipcode: e.target.value })
+          }
+        />
         <div className="custom-select">
           <select
             name=""
             id=""
-            value="1"
-            onChange={(e) => this.setState({...this.state, propertyType: e.target.value})}
+            value={this.state.propertyType}
+            onChange={(e) =>
+              this.setState({ ...this.state, propertyType: e.target.value })
+            }
           >
-            <option value="1">Property Type</option>
+            <option value="">Property Type</option>
             <option value="Condo">Condo</option>
             <option value="Single_Family">Single_Family</option>
             <option value="Multi_Family">Multi_Family</option>
@@ -86,36 +123,61 @@ class Search extends Component {
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="" value="0" onChange={(e) => this.setState({...this.state, beds: e.target.value})}>
-            <option>Bedrooms</option>
+          <select
+            name=""
+            id=""
+            value={this.state.beds}
+            onChange={(e) =>
+              this.setState({ ...this.state, beds: e.target.value })
+            }
+          >
+            <option value="Bedrooms">Bedrooms</option>
             {displayNumber}
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="" onChange={(e) => this.setState({...this.state, baths: e.target.value})}>
-            <option value="1">Bathrooms</option>
+          <select
+            name=""
+            id=""
+            onChange={(e) =>
+              this.setState({ ...this.state, baths: e.target.value })
+            }
+          >
+            <option value="Bathrooms">Bathrooms</option>
             {displayNumber}
           </select>
         </div>
 
-        <div className="custom-select">
-          <select name="" id="" onChange={(e) => this.setState({...this.state, minPrice: e.target.value})}>
-            <option value="1">MIN.price</option>
+        <div className={`custom-select ${this.state.cs_error} `}>
+          <select
+            name=""
+            id=""
+            onChange={(e) =>
+              this.setState({ ...this.state, minPrice: e.target.value })
+            }
+          >
+            <option value="MIN.price">MIN.price</option>
             {displayPrices}
           </select>
         </div>
         <div className="custom-select">
-          <select name="" id="" onChange={(e) => this.setState({...this.state, maxPrice: e.target.value})} >
-            <option value="1">MAX.price</option>
+          <select
+            name=""
+            id=""
+            onChange={(e) =>
+              this.setState({ ...this.state, maxPrice: e.target.value })
+            }
+          >
+            <option value="MAX.price">MAX.price</option>
             {displayPrices}
           </select>
         </div>
-        <div className="custom-select filter" onClick={() => this.clicked()}>
+        <div className="custom-select filter">
           <i className="fas fa-filter"></i> Filter
         </div>
 
         <Button
-          clicked={() => getListings()}
+          clicked={() => this.getListings()}
           type="advance"
           loader={
             loading === false ? (
@@ -144,4 +206,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search)) 

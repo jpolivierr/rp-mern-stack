@@ -2,6 +2,7 @@ import React from 'react'
 import './Modal.css'
 import {Link} from 'react-router-dom'
 import { Component } from 'react'
+import {withRouter} from 'react-router-dom'
 
 class Modal extends Component {
     state = {
@@ -15,6 +16,10 @@ class Modal extends Component {
             this.setState({modals: true}) 
         }
     }
+
+    handleClick = () =>{
+        this.props.history.push('/')
+      }
     render(){
         return (
         <div className={this.state.modals ? 'Modal' : 'Modal M-close'}
@@ -30,11 +35,8 @@ class Modal extends Component {
                 <div className= "close" 
                 //  onClick={()=>{this.props.closemodal(false)}}
                 >+</div>
-                 <div className="logoimg2 logoimg2-menue">
+                 <div className="logoimg2 logoimg2-menue" onClick={()=> this.handleClick()}>
                    </div>
-                   {/* <Link to='/' style={{width: '100%', height:'100%', position: 'absolute'}} >
-                      
-                   </Link> */}
              
 
                 <h1>Navigation</h1>
@@ -66,4 +68,4 @@ class Modal extends Component {
     
 }
 
-export default Modal
+export default withRouter(Modal) 

@@ -38,7 +38,7 @@ class WhatWeDo extends Component {
               <div className="box-img sell-img">
                 <p>Sell A Home</p>
               </div>
-              <h3>Find Buyers For Your Home</h3>
+              <h3>Find Buyers </h3>
               <p>
                 We work with homeowners all over South Florida in a number of
                 different circumstances. We buy houses in any condition, and as

@@ -11,12 +11,12 @@ import Contact from '../Component/08-Contact/Contact'
 
 
 class Home extends Component {
-    // componentDidMount(){
-    //     const scroll = ()=> {
-    //      window.scrollTo(0,0)
-    //     }
-    //     scroll()
-    // }
+    componentDidMount(){
+        const scroll = ()=> {
+         window.scrollTo(0,0)
+        }
+        scroll()
+    }
     render(){
          return (
         <div>

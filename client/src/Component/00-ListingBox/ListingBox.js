@@ -4,11 +4,15 @@ import { connect } from "react-redux"
 import Property from "../00-Properties/Properties"
 import axios from "axios"
 import "./ListingBox.css"
+import { Link } from "react-router-dom"
 
 class ListingBox extends Component {
   componentDidMount() {
-    if (localStorage.getItem("listings") === null) {
-
+    console.log("fired............")
+    if (
+      localStorage.getItem("listings") === null ||
+      localStorage.getItem("listings") === "undefined"
+    ) {
       console.log("fired from didMount")
       axios
         .get("/demo")
@@ -21,7 +25,8 @@ class ListingBox extends Component {
         })
         .catch((err) => console.log(err))
     } else {
-      return null
+      const propertyInfo = JSON.parse(localStorage.getItem("listings"))
+      this.setState({ ...this.state, listings: propertyInfo })
     }
   }
   state = {
@@ -29,7 +34,10 @@ class ListingBox extends Component {
   }
 
   render() {
-    const listings = JSON.parse(localStorage.getItem("listings")) === null ? this.state.listings : JSON.parse(localStorage.getItem("listings"))
+    const listings =
+      localStorage.getItem("listings") === "undefined"
+        ? this.state.listings
+        : JSON.parse(localStorage.getItem("listings"))
     const loading = this.props.loading
     const properties = listings.map((listings) => {
       const address = listings.address_new.line
@@ -42,14 +50,16 @@ class ListingBox extends Component {
       const price = listings.price
       const size = listings.sqft
       return (
-        <Property
-          key={listings.property_id}
-          kid={listings.property_id}
-          img={photo}
-          price={price}
-          address={`${address} ${city}, ${state}, ${zipcode}`}
-          detail={`${size}| ${beds} Bed | ${baths} Bath`}
-        />
+        <Link to ={`/singleListing/${listings.property_id}`} key={listings.property_id}>
+          <Property
+            key={listings.property_id}
+            kid={listings.property_id}
+            img={photo}
+            price={price}
+            address={`${address} ${city}, ${state}, ${zipcode}`}
+            detail={`${size} | ${beds} Bed | ${baths} Bath`}
+          />
+        </Link>
       )
     })
     return (
