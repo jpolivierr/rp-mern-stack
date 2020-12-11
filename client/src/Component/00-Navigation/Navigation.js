@@ -3,7 +3,6 @@ import "./Navigation.css"
 import { Link } from "react-router-dom"
 import { Component } from "react"
 import {withRouter} from 'react-router-dom'
-import Home from '../../Pages/Home'
 
 class Navigation extends Component {
   state = {

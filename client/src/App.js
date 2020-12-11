@@ -27,17 +27,16 @@ class App extends Component {
     this.setState({ modal: data })
   }
   closeModal = (data) => {
-    console.log(data)
     this.setState({ modal: data })
   }
 
-  changeNav = (e) => {
-    if (window.scrollY >= 90) {
-      this.setState({ navbar: true })
-    } else {
-      this.setState({ navbar: false })
-    }
-  }
+  // changeNav = (e) => {
+  //   if (window.scrollY >= 90) {
+  //     this.setState({ navbar: true })
+  //   } else {
+  //     this.setState({ navbar: false })
+  //   }
+  // }
 
   render() {
     // window.addEventListener('scroll', this.changeNav )

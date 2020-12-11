@@ -1,6 +1,5 @@
 import React from "react"
 import Button from "../../Util/Button/Button"
-import SectionTitle from "../../Util/SectionTitle/SectionTitle"
 import "./Partner.css"
 import { Link } from "react-router-dom"
 
@@ -21,21 +20,10 @@ function Partner() {
           </div>
         </div>
         <div className="Partner-content">
-          <SectionTitle
-            scstyle="Sc-title"
-            number="03"
-            subTitle="Partners"
-            Title="OUR PARTNERS"
-            titleWidth="300px"
-            p="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit amet consectetur adipisicing
-                        adipisicing elit. Dolorem sit amet consectetur adipisicing.  adipisicing elit. Dolorem sit amet consectetur adipisicing
-                        "
-            pdisplay="none"
-            pWidth=""
-          />
+        <h2 className='h2-row'> <span>Partners</span> BECOME A <br/> PARTNER</h2>
           <p>
             We work with real estate investing companies, individual home
-            sellers and buyers, and contractors alike.
+            sellers and buyers, and contractors alike. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, molestias!
           </p>
           <div className="P-btn">
             <Link to="/partners">

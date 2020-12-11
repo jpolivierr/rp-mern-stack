@@ -25,7 +25,6 @@ class Home extends Component {
             <AboutUs/>
             <WhatWeDo/>
              <WhyUs/>
-             
              <Partner/>
              <Specialty/>
             <Listing/>

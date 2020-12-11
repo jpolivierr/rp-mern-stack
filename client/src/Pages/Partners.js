@@ -2,7 +2,6 @@
 import React from 'react'
 import PageHeader from '../Component/00-PageHeader/PageHeader'
 import Contact from '../Component/08-Contact/Contact'
-import SectionTitle from '../Util/SectionTitle/SectionTitle'
 import Button from '../Util/Button/Button'
 import './Partners.css'
 import { Component } from 'react'
@@ -25,19 +24,7 @@ import { Component } from 'react'
            
                     <div className="about-page-main">
                    <div className="about-text-section">
-                   <SectionTitle
-                            scstyle = 'Sc-title'
-                    
-                        number='03'
-                        subTitle='Partners'
-                        Title='OUR PARTNERS'
-                        titleWidth ='300px'
-                        p='Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit amet consectetur adipisicing
-                        adipisicing elit. Dolorem sit amet consectetur adipisicing.  adipisicing elit. Dolorem sit amet consectetur adipisicing
-                        '
-                        pdisplay = 'none'
-                        pWidth = ''
-                    />
+                   <h2 className='h2-row'> <span>Partner</span> OUR PARTNERS</h2>
                <div className='partner-text'>
                            <h3>Realtor</h3>
                            We work with top realtors who are given fantastic properties in their sales portfolio, get the

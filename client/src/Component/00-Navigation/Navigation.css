@@ -28,28 +28,31 @@
 
 .logoimg2 {
   width: 18%;
-  height: 55%;
+  height: 65%;
   background: url(../../Images/Logo\ Edited.png) no-repeat center center/ contain;
   cursor: pointer;
-  
+  position: relative;
+  left: -3.5%;
+ 
 }
 
 .Navigation .links  {
   display: flex;
   /* border: 1px solid red; */
   position: relative;
+  right: 1.7%;
 }
 .Navigation .links li {
   cursor: pointer;
   list-style: none;
   color: var(--text-color);
   position: relative;
-  padding: 0px 1.8rem;
+  padding: 0px 1.5rem;
   /* margin: 0px 2.5em; */
   text-transform: uppercase;
   font-weight: bold;
   font-size: .8rem;
-  border-left: 1px solid rgb(199, 198, 198);
+  border-left: 1px solid rgba(199, 198, 198, 0.507);
   transition: all .2s ease;
 }
 
@@ -62,16 +65,18 @@
 }
 
 .socials {
+  position: relative;
   width: 15%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  right: .1%;
   
 }
 
 .socials li {
-  /* border-right: 1px solid var(--nav-border); */
+  border-right: 1px solid var(--nav-border);
   display: flex;
   justify-content: center;
   align-items: center;

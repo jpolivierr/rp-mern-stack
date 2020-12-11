@@ -11,7 +11,7 @@ class ListingBox extends Component {
     console.log("fired............")
     if (
       localStorage.getItem("listings") === null ||
-      localStorage.getItem("listings") === "undefined"
+      localStorage.getItem("listings") === undefined
     ) {
       console.log("fired from didMount")
       axios
@@ -35,9 +35,11 @@ class ListingBox extends Component {
 
   render() {
     const listings =
-      localStorage.getItem("listings") === "undefined"
+      localStorage.getItem("listings") === "undefined" ||
+      localStorage.getItem("listings") === null
         ? this.state.listings
         : JSON.parse(localStorage.getItem("listings"))
+
     const loading = this.props.loading
     const properties = listings.map((listings) => {
       const address = listings.address_new.line
@@ -49,11 +51,14 @@ class ListingBox extends Component {
       const photo = listings.photo
       const price = listings.price
       const size = listings.sqft
+
       return (
-        <Link to ={`/singleListing/${listings.property_id}`} key={listings.property_id}>
+        <Link
+          key={listings.property_id}
+          to={`/singleListing/${listings.property_id}`}
+        >
           <Property
-            key={listings.property_id}
-            kid={listings.property_id}
+            keys={listings.property_id}
             img={photo}
             price={price}
             address={`${address} ${city}, ${state}, ${zipcode}`}
@@ -62,6 +67,7 @@ class ListingBox extends Component {
         </Link>
       )
     })
+
     return (
       <div className={`Properties ${loading === false ? "" : "loading"}`}>
         {properties}

@@ -1,5 +1,4 @@
 import React from "react"
-import SectionTitle from "../../Util/SectionTitle/SectionTitle"
 import { Link } from "react-router-dom"
 import "./AboutUs.css"
 import Button from "../../Util/Button/Button"
@@ -9,12 +8,7 @@ function Aboutus() {
   return (
     <div className="AboutUs">
       <div className="AboutUs-main-section">
-        <SectionTitle
-          scstyle="Sc-title sc-about"
-          number="01"
-          subTitle="Our Mission"
-          Title="ABOUT US"
-        />
+       <h2 className='h2-row'> <span>Our Mission</span> ABOUT US</h2>
         <p>
           At Resurrecting Properties, we strive to renew, restore and revive
           homes through innovation, creativity and design, turning distressed
@@ -23,10 +17,9 @@ function Aboutus() {
           needs. We will treat our clients and team members with respect at all
           times. One of our motto’s is “How you do anything is how you do
           everything.” Our company will dedicate itself to everlasting education
-          and professional growth that will make the leaders of tomorrow.
-          <br />
-          <Link to="/about" style={{ textDecoration: "none" }}>
-            <span className="link">Read more &nbsp; &nbsp; </span>
+          and professional growth that will make the leaders of tomorrow. &nbsp;
+          <Link to="/about" style={{ textDecoration: "none", display: 'inline-block' }}>
+            <span className="link">Read more.. &nbsp; &nbsp; </span>
           </Link>
         </p>
       </div>
@@ -41,12 +34,7 @@ export function Aboutuspage() {
       <PageHeader label="about us" />
         <div className="about-page-main">
           <div className="about-text-section">
-            <SectionTitle
-              scstyle="Sc-title"
-              number="01"
-              subTitle="Our Mission"
-              Title="ABOUT US"
-            />
+          <h2 className='h2-row'> <span>Our Mission</span> ABOUT US</h2>
             <p>
               Our work is dedicated to finding the right match for our clients,
               whether they are looking for a house, a buyer for their property,

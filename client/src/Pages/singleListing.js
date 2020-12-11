@@ -22,7 +22,6 @@ class singleListings extends Component {
   render() {
     const Linfo = this.state.listingInfo
     const styling = {background: `url('${Linfo.photo}') no-repeat center center/cover `}
-    console.log(this.state.listingInfo)
     
     return (
       <div>

@@ -4,7 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6% 0px ;
+  padding: var(--div-padding);
+  background-color: var(--light-background);
+}
+.WhatWeDo::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.651);
 }
 
 .WhatWeDo-box {
@@ -33,13 +42,12 @@
 .box-img {
   width: 100%;
   height: 270px;
-  background: silver;
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   z-index: 0;
-  /* border: 1px solid yellow; */
+  margin-bottom: 1.5rem;
 }
 .box-img p {
     position: absolute;
@@ -51,6 +59,7 @@
   z-index: -7;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: .8rem;
   padding: 3% 5% !important;
   margin: 0 !important;
   height: min-content !important;
@@ -104,13 +113,13 @@
 }
 
 .buy-img {
-  background: url(../../Images/happy-asian.jpg) no-repeat center center/cover;
+  background: url(../../Images/buy_a_home.jpg) no-repeat center center/cover;
 }
 .sell-img {
-  background: url(../../Images/sell-2.jpg) no-repeat center center/cover;
+  background: url(../../Images/sell_a_home.jpg) no-repeat center center/cover;
 }
 .work-img {
-  background: url(../../Images/woman-in-business.jpg) no-repeat center
+  background: url(../../Images/team_up.jpg) no-repeat center
     center/cover;
 }
 .workwithus {

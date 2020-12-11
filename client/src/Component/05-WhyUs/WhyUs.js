@@ -1,5 +1,4 @@
 import React from "react"
-import SectionTitle from "../../Util/SectionTitle/SectionTitle"
 import Button from "../../Util/Button/Button"
 import { Link } from "react-router-dom"
 import "./WhyUs.css"
@@ -10,12 +9,7 @@ function WhyUs() {
 
       <div className="WhyUs-box">
         <div className="W-c">
-        <SectionTitle
-          scstyle="Sc-title"
-          number="01"
-          subTitle="Our Mission"
-          Title="WHY WORK WITH US?"
-        />
+        <h2 className='h2-row'> <span>Why us</span> WHY WORK <br/> WITH US?</h2>
           <p>
             With us, you will feel that your business partners are truly part of
             your team. Whether it’s a renovation and resell project, or

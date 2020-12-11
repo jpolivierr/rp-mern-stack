@@ -4,9 +4,21 @@
   display: grid;
   grid-template-rows: 1fr;
   cursor: pointer;
-
   transition: all 0.4s ease-in-out;
   position: relative;
+  animation: comein .7s ease-in-out;
+  position: relative;
+}
+
+@keyframes comein{
+  from{
+    opacity: 0;
+    top: 100px;
+  }
+  to{
+    opacity: 1;
+    top: 0;
+  }
 }
 
 .Property-box:hover {

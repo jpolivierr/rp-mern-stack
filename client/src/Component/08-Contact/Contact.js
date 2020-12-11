@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import "./Contact.css"
 import Button from "../../Util/Button/Button"
-import SectionTitle from "../../Util/SectionTitle/SectionTitle"
 import axios from "axios"
 import { connect } from "react-redux"
 import { setAlert, removeAlert } from "../../reduxStuff/actions/alert"
@@ -96,15 +95,7 @@ class Contact extends Component {
       <div className="Contact">
         <div className="C-bkg"></div>
         <div className="contact-box">
-          <SectionTitle
-            scstyle="Sc-title Sc-title-center Tcwhite"
-            color="white"
-            dw=""
-            number="06"
-            subTitle=""
-            Title="CONTACT US"
-            titleWidth="100%"
-          />
+        <h2 className='h2-column'> <span>Contact</span> LET'S TALK</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
             perspiciatis deleniti dignissimos!.

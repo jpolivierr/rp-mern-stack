@@ -4,8 +4,8 @@
   align-items: center;
   position: relative;
   z-index: 0;
-  background: url(../../Images/white-background.jpg) no-repeat center top/cover;
-  padding: 5% 0px;
+  background-color: var(--light-background);
+  padding: var(--div-padding);
   margin-top: 1%;
 }
 .Specialty::before {
@@ -53,17 +53,21 @@
   display: flex;
   justify-content: center;
   width: 31.3%;
-  border: 1px solid rgba(192, 192, 192, 0.514);
+  /* border: 1px solid rgba(192, 192, 192, 0.514); */
   padding: 50px 20px 30px 20px;
   text-align: center;
   position: relative;
+  background-color: white;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.144);
 }
 
-.Sp-box .sp-box-content {
-  /* display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 100%;  */
+.foreclosure{
+  z-index: 2;
+}
+
+ .sp{
+  text-align: center;
+  margin-bottom: 1.5rem !important;
 }
 
 .Sp-box .sp-box-content h3 {

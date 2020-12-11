@@ -1,28 +1,6 @@
-@media (min-width: 1800px) {
-  /* ********************************************************************************* 1606px */
-  body {
-    --width: 1200px;
-  }
-  * {
-    font-size: 99%;
-  }
-}
-@media (max-width: 1786px) {
-  /* ********************************************************************************* 1606px */
-  body {
-    --width: 75%;
-  }
-}
-@media (max-width: 1340px) {
-  body {
-    --width: 75%;
-  }
-}
+
 @media (max-width: 1260px) {
   /* ********************************************************************************* 1260 */
-  body {
-    --width: 90%;
-  }
   /* ------------------------------------------------------------------------ Search */
   .custom-select.filter {
     display: flex;
@@ -31,12 +9,10 @@
   }
   /* ------------------------------------------------------------------------------ Show Case */
   .Showcase {
-    height: calc(90vh - 12vh);
+    height: 100vh;
   }
-  .main-section-box h1 {
-    font-size: 1.5rem;
-  }
-  .Search div:nth-child(6),
+  
+  .Search div:nth-child(8),
   .Search div:nth-child(7) {
     display: none;
   }
@@ -45,10 +21,7 @@
   }
 
   @media (max-width: 1116px) {
-    .Search div:nth-child(6),
-    .Search div:nth-child(7) {
-      display: none;
-    }
+
     .Search {
       grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
     }
@@ -60,6 +33,16 @@
     height: 20%;
   }
 }
+@media (max-width: 1467px) {
+  .Navigation .links li {
+    padding: 0px 1.3rem !important;
+  }
+}
+@media (max-width: 1267px) {
+  .Navigation .links li {
+    padding: 0px 1.3rem !important;
+  }
+}
 @media (max-width: 1219px) {
   .box p {
     height: 20%;
@@ -68,13 +51,7 @@
 @media (max-width: 1090px) {
   /* ********************************************************************************* 1090px */
   /* ------------------------------------------------------------------------ Search */
-  .Search h2 {
-    font-size: 1.2rem;
-  }
   /* ------------------------------------------------------------------------ Navigation */
-  .Sides-Menue {
-    width: 50%;
-  }
   .Nav-links {
     position: relative;
   }
@@ -89,119 +66,10 @@
     margin: auto;
     width: 120px;
   }
-  .logoimg2 {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 120px;
-  }
-  .Nav-links .links {
-    display: none;
-  }
-  .socials {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .socials li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    z-index: 4;
-    border: none;
-    width: 5%;
-    height: 100%;
-  }
-  .socials li:nth-last-child(1) {
-    display: none;
-  }
-  .lines {
-    min-width: 25px;
-    height: 2.5px;
-    background: rgba(0, 0, 0, 0.616);
-    --width-line: 60%;
-  }
+
   /* ------------------------------------------------------------------------ Showcase */
-  .main-section-box h1 {
-    font-size: 1.5rem;
-  }
+ 
   /*-------------------------------------------------------------------- about section */
-  .AboutUs-main-section {
-    width: var(--width);
-    margin: auto;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 7rem 0px; */
-  }
-  .AboutUs {
-    padding: 6% 0px;
-  }
-  .AboutUs-main-section p {
-    border: none;
-    text-align: center;
-    margin-top: 3%;
-    width: 80%;
-    margin-left: 0px;
-    padding-left: 0px;
-  }
-  .AboutUs-main-section p span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .Sc-title {
-    width: min-content;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  .Sc-title h2 {
-    font-size: 2.3rem;
-    line-height: 150%;
-    margin: 0;
-    padding: 0;
-    height: min-content;
-    width: 300px;
-  }
-  .Sc-title h2::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 3px;
-    background: var(--main-color);
-    bottom: -10%;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-  .Sc-title h3 {
-    font-size: 0.8rem;
-    position: relative;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: normal;
-    margin: 0;
-    padding: 0;
-  }
-  .sp-box-content h3 {
-    font-size: 1.3rem !important;
-  }
-  .Sc-title h3::after {
-    display: none;
-  }
 
   .about-page-main {
     display: flex;
@@ -232,30 +100,22 @@
     height: min-content;
   }
 
-  .box p {
-    color: var(--text-color);
-    margin: 20px 0px 15px 0px;
-    height: min-content;
-  }
   /*-------------------------------------------------------------------- Why work with us */
-  .WhyUs {
-    padding: 5% 0px;
-  }
+  
   .WhyUs-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
   }
   .W-c {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: min-content;
   }
   .W-c p {
-    padding: 8% 0px !important;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -306,13 +166,6 @@
 
 @media (max-width: 870px) {
   /* ********************************************************************************* 870 */
-
-  .Showcase {
-    height: calc(100vh - 12vh);
-  }
-  .main-section-box h1 {
-    font-size: 1.5rem;
-  }
   .Search div:nth-child(4),
   .Search div:nth-child(5) {
     display: none;
@@ -322,14 +175,42 @@
     display: none;
   }
   .Search {
-    grid-template-columns: 2fr 2fr;
+    position: relative;
+    width: 100%;
+    height: min-content;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr !important  ;
+    align-items: center;
+    justify-content: center;
   }
-  .Sc-title h2 {
-    font-size: 1.5rem;
+  .Search h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  text-align: left;
+    padding-bottom: 2%;
   }
-  .Sc-title h3 {
-    font-size: 0.7rem;
+  .custom-select.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    height: 40px;
+    width: 90%;
   }
+  .Search .btn {
+    width: 90%;
+    place-self: center;
+  }
+
+  .Search input,
+  .Search div:nth-child(2) {
+    display: none;
+  }
+
+
   /* -----------------------------------------------------------------------------------------------------Our Partners */
   .Partner-box {
     display: flex;
@@ -374,61 +255,6 @@
 }
 @media (max-width: 594px) {
   /* ********************************************************************************* 594 */
-  /* -----------------------------------------------------------------------------------------------------About Us Section */
-  .Sides-Menue {
-    width: 90%;
-  }
-  .AboutUs {
-    display: none;
-  }
-  /* -----------------------------------------------------------------------------------------------------Showcase */
-  .Showcase {
-    height: calc(100vh - 12vh);
-  }
-
-  .main-section-box h1 {
-    font-size: 1.3rem;
-  }
-  /* -----------------------------------------------------------------------------------------------------search section */
-  .Search {
-    position: relative;
-    width: 100%;
-    height: min-content;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr !important  ;
-    align-items: center;
-    justify-content: center;
-  }
-  .Search h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-  }
-  .custom-select.filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    place-self: center;
-    height: 40px;
-    width: 90%;
-  }
-  .Search .btn {
-    width: 90%;
-    place-self: center;
-  }
-
-  .Search input:nth-child(2),
-  .Search div:nth-child(3) {
-    display: none;
-  }
-
-  .Search h2 {
-    text-align: left;
-    padding-bottom: 1%;
-  }
-
   /* -----------------------------------------------------------------------------------------------------What We Do section */
   .WhatWeDo-box {
     display: grid;

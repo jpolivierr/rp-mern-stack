@@ -20,11 +20,11 @@ class WhatWeDo extends Component {
                 <p>Buy A Home</p>
               </div>
               <h3>Looking For A Home?</h3>
-              <p>
+              <p className='pp'>
                 When our customers find the property they have been looking for,
                 we trust that we informed them on every indicator relevant to
                 them, that they browsed a highly targeted selection of
-                properties that matched their <br />
+                properties that matched their 
               </p>
               <Link to="/properties" style={{ textDecoration: "none" }}>
                 <span className="link">
@@ -39,7 +39,7 @@ class WhatWeDo extends Component {
                 <p>Sell A Home</p>
               </div>
               <h3>Find Buyers </h3>
-              <p>
+              <p className='pp'>
                 We work with homeowners all over South Florida in a number of
                 different circumstances. We buy houses in any condition, and as
                 cash buyers we are able to close quickly and on your time.{" "}
@@ -58,7 +58,7 @@ class WhatWeDo extends Component {
                 <p>Work With Us</p>
               </div>
               <h3>Let's Team Up</h3>
-              <p>
+              <p className='pp'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum
                 dolor sit amet consectetur adipisicing elit. Voluptatem ad
                 consectetur adipisicing elitconsectetur adipisicing elit sit

@@ -11,7 +11,7 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: #00000073;
+  background: #00000071;
 }
 .main-section-box {
   width: var(--width);
@@ -25,15 +25,14 @@
   align-items: center;
 }
 .main-section-box h1 {
-  letter-spacing: .3rem;
+  letter-spacing: .0rem;
   position: relative;
   top: 8%;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  line-height: 150%;
+  line-height: 130%;
   font-weight: lighter;
   color: var(--white-text);
   text-align: center;

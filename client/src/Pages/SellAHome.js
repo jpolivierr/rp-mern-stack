@@ -1,6 +1,5 @@
 import React from "react"
 import PageHeader from "../Component/00-PageHeader/PageHeader"
-import SectionTitle from "../Util/SectionTitle/SectionTitle"
 import Button from "../Util/Button/Button"
 import Specialty from "../Component/06-Specialty/Specialty"
 import "./SellAHome.css"
@@ -113,16 +112,7 @@ class SellAHome extends Component {
           <PageHeader label="sell your home" />
           <div className="about-page-main sell-page">
             <div className="about-text-section sellAHome">
-              <SectionTitle
-                scstyle="Sc-title"
-                number="01"
-                subTitle="How It Works"
-                Title=" How It Works"
-                titleWidth="250px"
-                p="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem"
-                pdisplay="none"
-                pWidth=""
-              />
+            <h2 className='h2-row'>  HOW IT WORKS</h2>
               <div className="sell-texts">
                 <h2>
                   {" "}

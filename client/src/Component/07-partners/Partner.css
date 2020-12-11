@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   background: white;
-  padding: 7% 0px;
+  padding: var(--div-padding);
 }
 .Partner-box {
   width: var(--width);
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .9fr 1fr;
   height: min-content;
 
   height: 480px;
@@ -45,7 +45,6 @@
 
 .Partner-content p {
   color: var(--text-color);
-  padding: 20px 0px 30px 0px;
 }
 .P-photo {
   position: relative;

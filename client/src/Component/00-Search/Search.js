@@ -38,6 +38,7 @@ getListings = () => {
               this.setState({...this.state, noResultError: 'No Result Found. Please try a different search'})
               this.props.setloading(false)
           }else{
+            this.setState({...this.state, noResultError: ''})
             localStorage.setItem("listings", JSON.stringify(res.data.listings))
           this.props.setloading(false)
           }

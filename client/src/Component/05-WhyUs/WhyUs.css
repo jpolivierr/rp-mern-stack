@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2% 0px;
+    padding: var(--div-padding);
 }
 
 .WhyUs-box{
@@ -17,20 +17,20 @@
 }
 
 .W-c{
-    display: flex;
+    /* display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start; */
     /* border: 2px solid yellow; */
 }
 
 .W-c p{
-    padding: 5% 160px 20px 0px;
+    padding: 0rem 10rem 0rem 0px;
     color: var(--text-color);
     color: black;
 }
 .W-c ul {
-    margin-bottom: 40px;
+    margin-bottom: 1rem;
 }
 .W-c ul li{
     color: var(--text-color);
@@ -47,15 +47,8 @@
     justify-content: flex-start;
     align-items: center;
     /* border: 4px solid red; */
-    background: url(../../Images/home-2.jpg) no-repeat center top/cover;
+    background: rgb(100, 100, 100);
     filter: grayscale(100%);
-}
-.W-img-box::before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(14, 13, 13, 0.733);
 }
 
 
@@ -64,7 +57,7 @@
     left: -5%;
     width: 100%;
     height: 90%;
-    background: url(../../Images/business-1.jpg) no-repeat center center/ cover;
+    background: url(../../Images/why_us.jpg) no-repeat center center/ cover;
     box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.692);
     
 }
