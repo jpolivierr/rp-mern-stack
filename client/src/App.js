@@ -10,6 +10,7 @@ import SellAHome from "./Pages/SellAHome"
 import Contact from "./Pages/Contact"
 import Modal from "./Component/00-Modal/Modal"
 import Navigation from "./Component/00-Navigation/Navigation"
+import NavigationCopy from './Component/00-Navigation copy/NavigationCopy'
 import Footer from "./Component/09-Footer/Footer"
 import "./App.css"
 
@@ -29,15 +30,6 @@ class App extends Component {
   closeModal = (data) => {
     this.setState({ modal: data })
   }
-
-  // changeNav = (e) => {
-  //   if (window.scrollY >= 90) {
-  //     this.setState({ navbar: true })
-  //   } else {
-  //     this.setState({ navbar: false })
-  //   }
-  // }
-
   render() {
     // window.addEventListener('scroll', this.changeNav )
     return (
@@ -45,7 +37,8 @@ class App extends Component {
         <Router>
           <div>
             {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
-            <Navigation truemodal={this.openModal} Position="" />
+            {/* <Navigation truemodal={this.openModal} Position="" /> */}
+            {/* <NavigationCopy truemodal={this.openModal} Position=""/> */}
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={Aboutus} />

@@ -1,7 +1,12 @@
 const setData = (req, res, next) => {
   const data = req.body
   const newData = {}
-
+  console.log(data)
+  if(data.cityOrZipcode === '' || data.cityOrZipcode === ' ' ){
+    res
+      .status(400)
+      .json({ errorType: 3, msg: "A city is required!" })
+  }
   const convertToInt = (data) => {
     data.trim()
     let removeDollar = data.replace("$", "")

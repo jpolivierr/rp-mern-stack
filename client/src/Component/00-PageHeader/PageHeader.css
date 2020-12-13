@@ -1,11 +1,11 @@
 .page-header{
     position:  relative;
     top: 10vh;
-    margin-bottom: 60px;
+    margin-bottom: 9rem;
     height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     background: url(../../Images/interior--1.jpg) no-repeat center center / cover;  
     /* background-attachment: fixed; */
     z-index: 0;
@@ -21,7 +21,10 @@
 }
 
 .page-header h1{
-    font-size: 2rem;
+    font-size: 2rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     color: white;
     text-transform: uppercase;
 }

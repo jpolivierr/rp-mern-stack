@@ -55,13 +55,7 @@ export function Aboutuspage() {
               make the leaders of tomorrow.
               <br />
               <br />
-              With a strong passion for helping others and the goal of restoring
-              communities, Resurrecting Properties was founded. We are a group
-              of real estate investors working to bring peace to sellers in
-              distressed situations by offering a resolution to their problem.
-              By working closely with other real estate investors, realtors, and
-              contractors we will be able to remodel and rehabilitate many
-              properties in different communities.
+         
             </p>
           </div>
           <form action="">

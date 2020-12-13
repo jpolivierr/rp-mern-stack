@@ -1,73 +1,9 @@
 
-@media (max-width: 1260px) {
-  /* ********************************************************************************* 1260 */
-  /* ------------------------------------------------------------------------ Search */
-  .custom-select.filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* ------------------------------------------------------------------------------ Show Case */
-  .Showcase {
-    height: 100vh;
-  }
-  
-  .Search div:nth-child(8),
-  .Search div:nth-child(7) {
-    display: none;
-  }
-  .Search {
-    grid-template-columns: 2fr 2fr 1fr 1fr;
-  }
 
-  @media (max-width: 1116px) {
 
-    .Search {
-      grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-    }
-  }
-}
 
-@media (max-width: 1400px) {
-  .box p {
-    height: 20%;
-  }
-}
-@media (max-width: 1467px) {
-  .Navigation .links li {
-    padding: 0px 1.3rem !important;
-  }
-}
-@media (max-width: 1267px) {
-  .Navigation .links li {
-    padding: 0px 1.3rem !important;
-  }
-}
-@media (max-width: 1219px) {
-  .box p {
-    height: 20%;
-  }
-}
 @media (max-width: 1090px) {
   /* ********************************************************************************* 1090px */
-  /* ------------------------------------------------------------------------ Search */
-  /* ------------------------------------------------------------------------ Navigation */
-  .Nav-links {
-    position: relative;
-  }
-
-  .Nav-links a{
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 120px;
-  }
-
-  /* ------------------------------------------------------------------------ Showcase */
  
   /*-------------------------------------------------------------------- about section */
 
@@ -166,51 +102,6 @@
 
 @media (max-width: 870px) {
   /* ********************************************************************************* 870 */
-  .Search div:nth-child(4),
-  .Search div:nth-child(5) {
-    display: none;
-  }
-  .Search div:nth-child(6),
-  .Search div:nth-child(7) {
-    display: none;
-  }
-  .Search {
-    position: relative;
-    width: 100%;
-    height: min-content;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr !important  ;
-    align-items: center;
-    justify-content: center;
-  }
-  .Search h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  text-align: left;
-    padding-bottom: 2%;
-  }
-  .custom-select.filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    place-self: center;
-    height: 40px;
-    width: 90%;
-  }
-  .Search .btn {
-    width: 90%;
-    place-self: center;
-  }
-
-  .Search input,
-  .Search div:nth-child(2) {
-    display: none;
-  }
-
-
   /* -----------------------------------------------------------------------------------------------------Our Partners */
   .Partner-box {
     display: flex;

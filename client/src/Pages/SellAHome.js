@@ -5,6 +5,8 @@ import Specialty from "../Component/06-Specialty/Specialty"
 import "./SellAHome.css"
 import axios from "axios"
 import { Component } from "react"
+import Modal from "../Component/00-Modal/Modal"
+import NavigationCopy from '../Component/00-Navigation copy/NavigationCopy'
 
 class SellAHome extends Component {
   componentDidMount() {
@@ -13,13 +15,20 @@ class SellAHome extends Component {
     }
     scroll()
   }
-
   state = {
     fname: "",
     lname: "",
     email: "",
     message: "",
     phone: "",
+    modal:false,
+    navbar: false
+  }
+  openModal = (data) => {
+    this.setState({ modal: data })
+  }
+  closeModal = (data) => {
+    this.setState({ modal: data })
   }
 
   formInputs = (e) => {
@@ -108,6 +117,8 @@ class SellAHome extends Component {
   render() {
     return (
       <div>
+        {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
+        <NavigationCopy truemodal={this.openModal} Position=""/>
         <div className="aboutuspage">
           <PageHeader label="sell your home" />
           <div className="about-page-main sell-page">

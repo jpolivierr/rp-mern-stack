@@ -1,46 +1,90 @@
 .Navigation {
   position: fixed;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.329) 17%,
-    rgba(0, 0, 0, 0.123) 61%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0);
   height: 10vh;
+  min-height: 60px;
   width: 100vw;
   display: flex;
   align-items: center;
   z-index: 4;
-  border-bottom: 1px solid var(--nav-border);
+  /* border-bottom: 1px solid var(--nav-border); */
+  /* border: 1px solid blue; */
 }
-
-
+.dark-nav {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid silver;
+}
+.light-nav {
+  background-color: rgba(27, 27, 27, 0);
+  transition: all 0.3s ease-in-out;
+}
 .Nav-links {
   height: 100%;
   width: var(--width);
-  margin: auto;
+  margin: 0px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-
-.logoimg2 {
-  width: 18%;
-  height: 65%;
-  background: url(../../Images/Logo\ Edited.png) no-repeat center center/ contain;
+.logoimg {
+  position: absolute;
+  width: var(--nav-size);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  position: relative;
-  left: -3.5%;
- 
+}
+.logoimg2 {
+  width: 70%;
+  min-width: 102px;
+  height: 100%;
+  background: url(../../Images/Logo-Recovered.png) no-repeat center center/
+    contain;
+  /* border: 1px solid yellow; */
+}
+.logoimg2Darklogo {
+  width: 70%;
+  min-width: 102px;
+  height: 100%;
+  background: url(../../Images/Logo\ Edited.png) no-repeat center center/
+    contain;
+  /* border: 1px solid yellow; */
 }
 
-.Navigation .links  {
+.logoimg2.navigation-copy{
+  background: url(../../Images/Logo\ Edited.png) no-repeat center center/contain
+}
+.logoimg-in-nav {
+  width: 8rem;
+  min-width: 8rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoimg2-in-nav-light {
+  width: 100%;
+  height: 100%;
+  background: url(../../Images/Logo-Recovered.png) no-repeat center center/
+    contain;
+  /* border: 1px solid yellow; */
+}
+.logoimg2-in-nav {
+  width: 100%;
+  height: 100%;
+  background: url(../../Images/Logo\ Edited.png) no-repeat center center/
+    contain;
+  /* border: 1px solid yellow; */
+}
+.Navigation .links {
   display: flex;
   /* border: 1px solid red; */
   position: relative;
-  right: 1.7%;
 }
 .Navigation .links li {
   cursor: pointer;
@@ -51,49 +95,65 @@
   /* margin: 0px 2.5em; */
   text-transform: uppercase;
   font-weight: bold;
-  font-size: .8rem;
-  border-left: 1px solid rgba(199, 198, 198, 0.507);
-  transition: all .2s ease;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.Navigation .links .active{
+.Navigation .links-light li {
+  color: var(--text-color);
+}
+
+.Navigation .links a {
+  display: flex;
+  align-items: center;
+
+  height: 10vh;
+}
+
+.Navigation .links .active {
   border-left: none;
 }
 
-.Navigation .links li:hover{
+.Navigation .links li:hover {
   color: var(--main-color);
 }
 
 .socials {
   position: relative;
   width: 15%;
+  min-width: 170px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  right: .1%;
-  
+  right: 0.1%;
+  z-index: 1;
 }
 
 .socials li {
-  border-right: 1px solid var(--nav-border);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: relative;
   z-index: 4;
-  
   width: 33.3%;
   height: 100%;
 }
 .socials li i {
+  color: white;
+}
+
+.icon-light li i {
   color: var(--main-color);
 }
 
 .Menuebars {
   width: min-content;
-  background: white;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -101,62 +161,87 @@
   position: relative;
   width: 100%;
   max-width: 40px;
-  height: 100%; 
+  height: 100%;
+  border-bottom: 3px solid white;
+  position: relative;
+}
+.Menuebars-light {
+  border-bottom: 4px solid var(--main-color);
+  bottom: -1.5px;
+}
+.Menuebars::after {
+  position: absolute;
+  content: "";
+  width: 3000rem;
+  height: 2px;
+  border-bottom: var(--nav-border-size) solid var(--nav-border);
+  bottom: -4px;
+  left: 0;
 }
 
 .lines {
   width: 100%;
   height: 2.5px;
-  background: rgba(0, 0, 0, 0.616);
-  --width-line: 60%
+  background: white;
+  --width-line: 60%;
 }
+.lines-light {
+  background: var(--text-color);
+}
+
 .line2 {
   width: var(--width-line);
   position: relative;
 }
-.line2::before{
+.line2::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 60%;
   height: 100%;
   top: 7px;
   background: inherit;
 }
-.line2::after{
+.line2::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 90%;
   height: 100%;
   bottom: 7px;
   background: inherit;
 }
 
-.li-phone:hover .drop-box {
-  bottom: -46px;
-  opacity: 1;
-}
-.li-email:hover .drop-box {
-  left: -50px;
-  bottom: -46px;
-  opacity: 1;
-}
-
-.phone-number {
-  pointer-events: none;
-}
-
-.email-number {
-  pointer-events: none;
-  display: none;
-}
-
 .drop-box {
   position: absolute;
-  bottom: -80px;
-  left: -0px;
-  opacity: 0;
-  background: white;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -50px;
+  left: -100px;
+  opacity: 1;
+  background: var(--main-color);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+  color: white;
+  font-weight: bold;
 }
+
+
+.drop-email{
+  position: absolute;
+  height: 40px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  left: -250px;
+  bottom: -50px;
+  background: var(--main-color);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  color: white;
+  font-weight: bold;
+}
+

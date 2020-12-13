@@ -5,6 +5,8 @@ import Contact from '../Component/08-Contact/Contact'
 import Button from '../Util/Button/Button'
 import './Partners.css'
 import { Component } from 'react'
+import NavigationCopy from '../Component/00-Navigation copy/NavigationCopy'
+import Modal from "../Component/00-Modal/Modal"
 
 
 
@@ -16,9 +18,21 @@ import { Component } from 'react'
         }
         scroll()
     }
+    state = {
+        modal: false,
+        navbar: false,
+      }
+      openModal = (data) => {
+        this.setState({ modal: data })
+      }
+      closeModal = (data) => {
+        this.setState({ modal: data })
+      }
      render(){
          return (
         <div>
+            <NavigationCopy truemodal={this.openModal} Position=""/>
+            {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
            <PageHeader label='our partners'/>
            <div className='aboutuspage'>
            

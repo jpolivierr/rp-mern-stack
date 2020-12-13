@@ -39,8 +39,8 @@ class Modal extends Component {
                    </div>
              
 
-                <h1>Navigation</h1>
-                <ul className="side-nav">
+                <h3>Navigation</h3>
+                <ul className="side-nav-bar">
                    <Link className='lilink' to='/'> <li>Home</li></Link> 
                    <Link className='lilink' to='/about'> <li>About Us</li></Link> 
                    <Link className='lilink' to='/sellahome'> <li>Sell A Home</li></Link> 
@@ -48,13 +48,13 @@ class Modal extends Component {
                    <Link className='lilink' to='/partners'> <li>Our Partners</li></Link> 
                    <Link className='lilink' to='/contact'> <li>Contact</li></Link> 
                 </ul>
-                <h1>Contact</h1>
+                <h3>Contact</h3>
                 <ul className="side-contact">
                     <li>142 Nw 13th ct Miami, Fl, 33164</li>
                     <li>786-589-8898</li>
                     <li>info@resurectingproperties.com</li>
                 </ul>
-                <h1>Social</h1>
+                <h3>Social</h3>
                 <ul className="side-social">
                     <i className="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}} ></i>
                       <i className="fab fa-instagram" onClick={()=>{window.open('')}}></i>
