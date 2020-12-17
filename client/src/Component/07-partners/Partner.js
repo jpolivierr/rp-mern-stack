@@ -20,10 +20,15 @@ function Partner() {
           </div>
         </div>
         <div className="Partner-content">
-        <h2 className='h2-row'> <span>Partners</span> BECOME A <br/> PARTNER</h2>
+          <h2 className="h2-row">
+            {" "}
+            <span>Partners</span> BECOME A <br /> PARTNER
+          </h2>
           <p>
             We work with real estate investing companies, individual home
-            sellers and buyers, and contractors alike. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, molestias!
+            sellers and buyers, and contractors alike. No task
+            or situation is too big or complicated for our team and we will do
+            everything we can to find the right solution in any circumstance.
           </p>
           <div className="P-btn">
             <Link to="/partners">

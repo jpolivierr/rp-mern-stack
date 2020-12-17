@@ -1,5 +1,4 @@
 import React from "react"
-import Button from "../../Util/Button/Button"
 import "./Footer.css"
 import { Link } from "react-router-dom"
 
@@ -54,21 +53,21 @@ function Footer() {
         </div>
         <div className="F newsLetter">
           <h3>JOIN OUR NEWS LETTER</h3>
-          <form action="">
+          <form className='newLetter-form' action="">
             <input type="text" placeholder="First Name" />
             <input type="text" placeholder="Last Name" />
             <input type="text" placeholder="Email" />
+            <button>SUBMIT</button>
           </form>
-          <Button type="submit" label= 'SUBMIT' color='white'/>
+          
         </div>
       </div>
 
       <div className="bottom-footer">
         <div className="container">
           <div className="Bf-box">
-            Copyright© 2020. All rights reserved. | Terms of Use | Sitemap Real
-            Estate Internet Marketing <br />
-            Privacy Policy | Dont Sell My Personal Information
+            Copyright© 2020. All rights reserved. | Terms of Use | <br />
+            Privacy Policy | Dont Our Personal Information
           </div>
         </div>
       </div>

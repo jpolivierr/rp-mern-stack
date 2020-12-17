@@ -1,12 +1,11 @@
 import React from "react"
 import PageHeader from "../Component/00-PageHeader/PageHeader"
-import Button from "../Util/Button/Button"
 import Specialty from "../Component/06-Specialty/Specialty"
 import "./SellAHome.css"
 import axios from "axios"
 import { Component } from "react"
 import Modal from "../Component/00-Modal/Modal"
-import NavigationCopy from '../Component/00-Navigation copy/NavigationCopy'
+import NavigationCopy from "../Component/00-Navigation copy/NavigationCopy"
 
 class SellAHome extends Component {
   componentDidMount() {
@@ -21,8 +20,9 @@ class SellAHome extends Component {
     email: "",
     message: "",
     phone: "",
-    modal:false,
-    navbar: false
+    modal: false,
+    navbar: false,
+    messageSent: ''
   }
   openModal = (data) => {
     this.setState({ modal: data })
@@ -33,7 +33,6 @@ class SellAHome extends Component {
 
   formInputs = (e) => {
     // const formCopy = {...this.state}
-
     const value = e.target.value
 
     switch (e.target.id) {
@@ -59,13 +58,13 @@ class SellAHome extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault()
-    
+
     const classes = e.target.childNodes
     const body = JSON.stringify(this.state)
     const config = {
       headers: { "Content-Type": "application/json" },
     }
-   
+
     classes.forEach((child) => {
       if (child.id === "fname") {
         child.className = ""
@@ -82,6 +81,7 @@ class SellAHome extends Component {
     try {
       const res = await axios.post("/client", body, config)
       if (res.data) {
+        this.setState({messageSent: 'Message Sent! Thank you for contacting us'})
         classes.forEach((child) => {
           if (child.id === "serverMsg") {
             child.className = "serverMsg"
@@ -95,9 +95,10 @@ class SellAHome extends Component {
               message: "",
             })
             setTimeout(() => {
+              this.setState({messageSent: ''})
               child.className = ""
               child.innerHTML = ""
-            }, 10000)
+            }, 4000)
           }
         })
       }
@@ -118,44 +119,59 @@ class SellAHome extends Component {
     return (
       <div>
         {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
-        <NavigationCopy truemodal={this.openModal} Position=""/>
+        <NavigationCopy truemodal={this.openModal} Position="" />
         <div className="aboutuspage">
           <PageHeader label="sell your home" />
           <div className="about-page-main sell-page">
             <div className="about-text-section sellAHome">
-            <h2 className='h2-row'>  HOW IT WORKS</h2>
-              <div className="sell-texts">
-                <h2>
-                  {" "}
-                  <span>1.</span> Submit Your Info
-                </h2>
-                <p>Enter your information in the web form.</p>
-                <br />
-                <h2>
-                  <span>2.</span> We'll Call You
-                </h2>
-                <p>
-                  You will be contacted to discuss an offer for the property
-                  submitted
-                </p>
+              <h2 className="h2-row"> SELL YOUR HOME</h2>
+              <p>
+                We work with homeowners all over South Florida in a number of
+                different circumstances. We buy houses in any condition, and as
+                cash buyers we are able to close quickly and on your time. Our
+                goal is to bring homeowners to a swift, smooth, and beneficial
+                solution.
+              </p>
+              
+              <ul>
+                <h3>HOW IT WORKS</h3>
+                <li>
+                  <div className="list-title">
+                    <span>1.</span> <h4>Submit Your Info</h4>
+                  </div>
 
-                <br />
-                <h2>
-                  <span>3.</span> Like the Offer?
-                </h2>
-                <p>
-                  You may accept or reject the offer presented to you during the
-                  call
-                </p>
-                <br />
-                <h2>
-                  <span>4.</span> Get the Cash
-                </h2>
-                <p>
-                  You have the cash in hand that you need, and your home is
-                  sold!
-                </p>
-              </div>
+                  <p>Enter your information in the web form.</p>
+                </li>
+                <li>
+                  <div className="list-title">
+                    <span>2.</span> <h4>We'll Call You</h4>
+                  </div>
+                  <p>
+                    You will be contacted to discuss an offer for the property
+                    submitted
+                  </p>
+                </li>
+                <li>
+                  <div className="list-title">
+                    <span>3.</span> <h4>Like the Offer?</h4>
+                  </div>
+
+                  <p>
+                    You may accept or reject the offer presented to you during
+                    the call
+                  </p>
+                </li>
+                <li>
+                  <div className="list-title">
+                    <span>4.</span> <h4>Get the Cash</h4>
+                  </div>
+
+                  <p>
+                    You have the cash in hand that you need, and your home is
+                    sold!
+                  </p>
+                </li>
+              </ul>
             </div>
             <form
               action=""
@@ -164,6 +180,9 @@ class SellAHome extends Component {
               }}
             >
               <h3>GET A QUOTE</h3>
+              <div className="success-message">
+               {this.state.messageSent}
+             </div>
               <input
                 id="fname"
                 type="text"
@@ -193,22 +212,15 @@ class SellAHome extends Component {
                 value={this.state.phone}
               />
               <textarea
-               onChange={(e) => this.formInputs(e)}
-                placeholder="Message (optional)"
+                onChange={(e) => this.formInputs(e)}
+                placeholder="Message"
                 name=""
                 id="message"
                 cols="3"
                 rows="0"
                 value={this.state.message}
               ></textarea>
-              <div className="c-button">
-                <Button
-                  type="submit"
-                  label="GET AN OFFER"
-                  color="white"
-                  backcolor="var(--main-color)"
-                />
-              </div>
+               <button>GET AN OFFER</button>
               <div id="serverMsg" className=""></div>
             </form>
           </div>

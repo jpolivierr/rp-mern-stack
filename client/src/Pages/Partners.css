@@ -6,3 +6,13 @@
     font-size: var(--h3-size);
     padding-bottom: 10px;
 }
+
+.partner-form select{
+    border: 1px solid silver;
+    color: var(--text-color);
+    padding: 1rem .8rem;
+}
+
+.partner-form button{
+    width: 100%;
+}

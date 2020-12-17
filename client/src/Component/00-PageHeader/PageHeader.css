@@ -1,8 +1,9 @@
 .page-header{
     position:  relative;
     top: 10vh;
-    margin-bottom: 9rem;
+    margin-bottom: 7rem;
     height: 20vh;
+    max-height: 130px;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;

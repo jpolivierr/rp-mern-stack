@@ -68,3 +68,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.newLetter-form button{
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    padding: .5rem 0rem;
+}

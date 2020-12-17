@@ -6,25 +6,29 @@ export default function Specialty() {
   return (
     <div className="Specialty">
       <div className="Specialty-box">
-       
-      <h2 className='h2-column'> <span>Specialty</span> SPECIALTY</h2>
-        <p className='sp'>Lorem ipsum, dolor sit amet consectetur adipisicing elit <br/> accusantium animi odio in magnam ab non? </p>
+        <h2 className="h2-column">
+          {" "}
+          <span>Specialty</span> SPECIALTY
+        </h2>
+        <p className="sp">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit <br />{" "}
+          accusantium animi odio in magnam ab non?{" "}
+        </p>
         <div className="Sp-details">
-
- <div className="Sp-box shortsale">
+          <div className="Sp-box shortsale">
             <div className="Sp-img">01</div>
             <div className="sp-box-content">
               <h3>Short Sale</h3>
               <p>
-                When an owner is in debt and their home value declines, we can
-                help them get the best deal they can on their property, and make
-                a sale in the shortest amount of time. We match buyers with
-                sellers, always making sure that both parties are satisfied with
-                the deal. Et{" "}
+                Owe more on your property than its current value? Need to sell
+                your house but have a high loan balance? Let us help you! There
+                are always options even when it feels like nothing can be done.
+                No need to suffer through a tough situation involving your home
+                on the thought that there is no way out. Contact us to discuss
+                the options there are for you in this situation.
               </p>
             </div>
           </div>
-
 
           <div className="Sp-box foreclosure">
             <div className="Sp-img">02</div>
@@ -41,13 +45,10 @@ export default function Specialty() {
             </div>
           </div>
 
-
-         
-
           <div className="Sp-box maintenance">
             <div className="Sp-img">03</div>
             <div className="sp-box-content">
-              <h3>Deferred </h3>
+              <h3>Deferred MAINTENANCE </h3>
               <p>
                 If your property needs a lot of maintenance and work but you do
                 not have the money or desire to fix it, we can help! Our company

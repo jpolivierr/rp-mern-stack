@@ -9,8 +9,6 @@ import Partners from "./Pages/Partners"
 import SellAHome from "./Pages/SellAHome"
 import Contact from "./Pages/Contact"
 import Modal from "./Component/00-Modal/Modal"
-import Navigation from "./Component/00-Navigation/Navigation"
-import NavigationCopy from './Component/00-Navigation copy/NavigationCopy'
 import Footer from "./Component/09-Footer/Footer"
 import "./App.css"
 

@@ -3,14 +3,20 @@
 }
 .about-page-main.sell-page form{
     position: relative;
+    max-height: 533px;
 }
 .about-page-main.sell-page form .serverMsg{
-    bottom: -10px;
+    border: none;
+    bottom: 0px;
+    color: transparent;
 }
 .about-page-main.sell-page form input{
     border:none;
     border-bottom: 1px solid silver;
     padding: 2% 10px;
+}
+.sell-page{
+    padding-bottom: 6rem !important;
 }
 .sellAHome p{
     position: relative;
@@ -21,33 +27,47 @@
     margin-bottom: 2%;
 }
 
-.sell-texts h2{
+.sellAHome h3{
+    margin-top: 3rem !important;
+}
+h4{
+    display: inline;
+}
+.list-title{
     display: flex;
     align-items: center;
-    font-size: 1.3rem;
-    padding-bottom: 1%;
 }
+.sellAHome ul{
+ display: flex ;
+ flex-flow: column;
+ align-items: flex-start;
+}
+.sellAHome ul li span{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    color: inherit;
+    color: var(--main-color);
+    padding-right: .3rem;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.sellAHome ul li{
+    margin-bottom: .3rem;
+}
+
+.sellAHome ul li p{
+    text-align: left;
+}
+
+
 @media (max-width: 1090px){
     .sellAHome p{
         display: flex;
-        text-align: left;
+        text-align: center;
 
     }
-}
-
-.sellAHome span{
- background: var(--main-color);
- color: white;
- font-size: inherit;
- display: flex;
- justify-content: center;
- align-items: center;
- padding: 0em .5em;
- margin-right: 1%;
-}
-
-.sellAHome .sell-texts{
-margin-top: 50px;
 }
 
 .sell-page{
