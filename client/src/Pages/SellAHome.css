@@ -3,6 +3,8 @@
 }
 .about-page-main.sell-page form{
     position: relative;
+    height: 60vh;
+    min-height: 38rem;
     max-height: 533px;
 }
 .about-page-main.sell-page form .serverMsg{

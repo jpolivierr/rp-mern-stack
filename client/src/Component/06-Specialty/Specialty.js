@@ -23,9 +23,8 @@ export default function Specialty() {
                 Owe more on your property than its current value? Need to sell
                 your house but have a high loan balance? Let us help you! There
                 are always options even when it feels like nothing can be done.
-                No need to suffer through a tough situation involving your home
-                on the thought that there is no way out. Contact us to discuss
-                the options there are for you in this situation.
+                Contact us to discuss the options there are for you in this
+                situation.
               </p>
             </div>
           </div>

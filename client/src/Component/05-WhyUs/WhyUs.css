@@ -28,6 +28,7 @@
     padding: 0rem 10rem 0rem 0px;
     color: var(--text-color);
     color: black;
+    max-width: 620px;
 }
 .W-c ul {
     margin-bottom: 1rem;
