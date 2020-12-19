@@ -2,7 +2,8 @@ const express = require("express")
 const router = express.Router()
 const axios = require("axios")
 const setData = require('../../config/setData')
-require("dotenv").config
+// require("dotenv").config
+const configKEY = require('config').get('API_KEY')
 
 //@route GET api/Properties
 //@desc Test route
@@ -61,7 +62,7 @@ router.post("/",setData, async (req, res) => {
       beds_min:beds,
     },
     headers: {
-      "x-rapidapi-key": `${process.env.API_KEY}`,
+      "x-rapidapi-key": `${configKEY}`,
       "x-rapidapi-host": "realtor.p.rapidapi.com",
     },
   }
