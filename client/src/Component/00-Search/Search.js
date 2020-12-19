@@ -185,15 +185,13 @@ class Search extends Component {
 
           <Button
             clicked={() => this.getListings()}
+              label = {loading === false ? 'SEARCH' : ''}
             type="advance"
             loader={
               loading === false ? (
                 ""
               ) : (
-                <div className="lds-ripple">
-                  <div></div>
-                  <div></div>
-                </div>
+                <div class="lds-dual-ring"></div>
               )
             }
             loaderbk={loading === false ? "" : "loader"}

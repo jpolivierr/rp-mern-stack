@@ -37,7 +37,7 @@ function Button(props) {
             return (
         <button onClick = {props.clicked} className={`advanced ${props.loaderbk}`}>
             {props.loader}
-           SEARCH
+            {props.label}
         </button>
     )
        default : 

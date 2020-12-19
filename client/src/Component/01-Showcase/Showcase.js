@@ -10,14 +10,14 @@ function Showcase() {
       <div className="side-img"></div>
       <div className="side-nav">
         <div className="social-nav">
-          <i class="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}}></i>
-          <i class="fab fa-instagram"onClick={()=>{window.open('https://www.instagram.com/')}}></i>
-          <i class="fab fa-linkedin-in" onClick={()=>{window.open('https://www.linkedin.com/')}}></i>
-          <i class="fab fa-twitter" onClick={()=>{window.open('https://www.twitter.com/')}}></i>
+          <i className="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}}></i>
+          <i className="fab fa-instagram"onClick={()=>{window.open('https://www.instagram.com/')}}></i>
+          <i className="fab fa-linkedin-in" onClick={()=>{window.open('https://www.linkedin.com/')}}></i>
+          <i className="fab fa-twitter" onClick={()=>{window.open('https://www.twitter.com/')}}></i>
         </div>
         <span>
-          SCROLL DOWN <i class="fas fa-chevron-right"></i>
-          <i class="fas fa-chevron-right"></i>{" "}
+          SCROLL DOWN <i className="fas fa-chevron-right"></i>
+          <i className="fas fa-chevron-right"></i>{" "}
         </span>
       </div>
       <div className="main-section-box">
