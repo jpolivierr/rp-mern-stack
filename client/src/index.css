@@ -423,6 +423,9 @@ h3 {
 }
 
 @media (max-width: 861px) {
+  .showcase{
+    height: 75vh !important;
+  }
   .showcase-content button {
     display: none !important;
   }
