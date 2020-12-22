@@ -6,7 +6,6 @@ function WhyUs() {
   return (
     <div className="WhyUs">
       <div className="WhyUs-bkg"></div>
-
       <div className="WhyUs-box">
         <div className="W-c">
           <h2 className="h2-row">
@@ -48,6 +47,7 @@ function WhyUs() {
         </div>
         <div className="W-img-box">
           <div className="W-img"></div>
+          <div className="dot-img"></div>
         </div>
       </div>
     </div>

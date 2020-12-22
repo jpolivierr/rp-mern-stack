@@ -18,6 +18,7 @@ function Partner() {
           <div className="P-photo contractor">
             <p>Investor</p>
           </div>
+          <div className="red-square"></div>
         </div>
         <div className="Partner-content">
           <h2 className="h2-row">
@@ -42,6 +43,7 @@ function Partner() {
           </div>
         </div>
       </div>
+      <div className="dot-img"></div>
     </div>
   )
 }

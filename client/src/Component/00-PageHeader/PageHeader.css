@@ -1,6 +1,6 @@
 .page-header{
     position:  relative;
-    top: 10vh;
+    top: 72px;
     margin-bottom: 7rem;
     height: 20vh;
     max-height: 130px;
@@ -21,11 +21,15 @@
     z-index: -1;
 }
 
-.page-header h1{
+.page-header .header-h1{
+    position: relative;
+    top: -2%;
     font-size: 2rem !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     color: white;
     text-transform: uppercase;
+    padding: 0;
+    margin: auto !important;
 }

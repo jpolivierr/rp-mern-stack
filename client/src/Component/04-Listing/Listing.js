@@ -10,7 +10,7 @@ export default function Listing() {
     <div className="Listing">
       <div className="Listing-box">
       <h2 className='h2-column'> <span>Properties</span> VIEW PROPERTIES</h2>
-      <p className='sp'>Lorem ipsum, dolor sit amet consectetur adipisicing elit <br/> accusantium animi odio in magnam ab non? </p>
+      <p className='sp'>We have a variety of properties <br/> that will fit your needs. </p>
         <ListingBox/>
         <Link style={{ textDecoration: "none" }} to="/properties">
           <Button

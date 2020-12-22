@@ -97,8 +97,7 @@ class Contact extends Component {
         <div className="contact-box">
         <h2 className='h2-column'> <span>Contact</span> LET'S TALK</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            perspiciatis deleniti dignissimos!.
+            We would love to hear from you. Our team will be available with any questions you may have. <br/> Please do not hesitate to contact us
           </p>
           <form onSubmit={(e) => this.onSubmit(e)}>
             <input

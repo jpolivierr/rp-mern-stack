@@ -11,8 +11,7 @@ export default function Specialty() {
           <span>Specialty</span> SPECIALTY
         </h2>
         <p className="sp">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit <br />{" "}
-          accusantium animi odio in magnam ab non?{" "}
+        If you are late on your mortgage payment, need a lot of work or are considering<br/> doing a short sale,  then you are in the right place.?{" "}
         </p>
         <div className="Sp-details">
           <div className="Sp-box shortsale">

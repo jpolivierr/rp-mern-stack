@@ -2,7 +2,7 @@ body {
   --showcase-img: url(./Images/House-4.jpg);
   --transparent: #d9d9d94b;
   --main-color: #ed1c24;
-  --social-color: rgb(255, 255, 255);
+  --social-color: rgba(255, 255, 255, 0.918);
   --white-text: white;
   --text-color: rgb(87, 87, 87);
   --nav-border: rgba(255, 255, 255, 0.267);
@@ -243,6 +243,9 @@ h3 {
 
 
 @media (max-width: 1090px) {
+  .dot-img{
+    display: none;
+  }
   .Sides-Menue{
     width: 50% !important;
   }

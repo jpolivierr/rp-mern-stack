@@ -37,8 +37,8 @@ class App extends Component {
             {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
             {/* <Navigation truemodal={this.openModal} Position="" /> */}
             {/* <NavigationCopy truemodal={this.openModal} Position=""/> */}
+            
             <Switch>
-              <Route path="/" exact component={Home} />
               <Route path="/about" exact component={Aboutus} />
               <Route path="/properties" exact component={Listings} />
               <Route path="/partners" exact component={Partners} />
@@ -54,6 +54,8 @@ class App extends Component {
                   )
                 }}
               />
+              <Route path="/" component={Home} />
+               <Home/>
             </Switch>
             <Footer />
           </div>

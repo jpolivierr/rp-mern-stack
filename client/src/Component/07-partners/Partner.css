@@ -1,4 +1,5 @@
 .Partner {
+  position: relative;
   height: min-content;
   display: flex;
   align-items: center;
@@ -11,11 +12,12 @@
   display: grid;
   grid-template-columns: .9fr 1fr;
   height: min-content;
-
+  z-index: 1;
   height: 480px;
 }
 
 .Partner-photos {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
@@ -82,4 +84,20 @@
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   opacity: 0;
+}
+
+.red-square{
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   background-color: var(--main-color);
+   z-index: -1;
+   bottom: -10px;
+   left: -10px;
+}
+
+.Partner .dot-img{
+  width: 7.8%;
+  bottom: -150px;
+  left: 0;
 }

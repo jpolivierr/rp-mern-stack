@@ -20,7 +20,7 @@ function Aboutus() {
           situations by offering a resolution to their problem. By working
           closely with other real estate investors, realtors, and contractors we
           will be able to remodel and rehabilitate many properties in different
-          communities.. &nbsp;
+          communities. &nbsp;
           <Link
             to="/about"
             style={{ textDecoration: "none", display: "inline-block" }}
@@ -28,8 +28,9 @@ function Aboutus() {
             <span className="link">Read more.. &nbsp; &nbsp; </span>
           </Link>
         </p>
+        
       </div>
-      <div className="dots"></div>
+      <div className="dot-img"></div>
     </div>
   )
 }

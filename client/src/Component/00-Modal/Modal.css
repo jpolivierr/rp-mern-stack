@@ -121,14 +121,15 @@
 
 .logoimg2.logoimg2-menue {
   position: relative !important;
-  width: 30% !important;
-  height: 10% !important;
+  width: 105px !important;
+  height: 100px !important;
   min-height: 100px;
   background: url(../../Images/Logo\ Edited.png) no-repeat center center/
     contain;
   cursor: pointer !important ;
   margin: 0;
-  margin-bottom: 3% !important;
+  margin-bottom: 0px !important;
+  top: 20px;
 }
 
 .Sides-Menue .side-social {

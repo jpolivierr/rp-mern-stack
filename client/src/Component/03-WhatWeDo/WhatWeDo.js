@@ -57,10 +57,8 @@ class WhatWeDo extends Component {
             </div>
             <h3>Let's Team Up</h3>
             <p className="pp">
-              Lorem ipsum dolor, sit amet consectetur adipisicing Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Voluptatem ad
-              consectetur adipisicing elitconsectetur adipisicing elit sit amet
-              consectetur <br />
+            We work hand-in hand with local Real Estate Agents to submit cash offers on properties that fit our 
+            criteria. We focus on submitting offers with strong, yet flexible terms that benefit the seller based on their circumstances.<br />
             </p>
             <Link to="/partners" style={{ textDecoration: "none" }}>
               <span className="link">
