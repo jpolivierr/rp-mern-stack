@@ -31,6 +31,7 @@
 
 .sellAHome h3{
     margin-top: 3rem !important;
+    font-size: 2rem !important;
 }
 h4{
     display: inline;
@@ -38,7 +39,14 @@ h4{
 .list-title{
     display: flex;
     align-items: center;
+    font-size: 1.5rem !important;
 }
+
+ul li .list-title h4 {
+    font-size: 1.4rem;
+}
+
+
 .sellAHome ul{
  display: flex ;
  flex-flow: column;
@@ -49,11 +57,11 @@ h4{
     flex-flow: column;
     justify-content: flex-start;
     color: inherit;
-    color: var(--main-color);
+  
     padding-right: .3rem;
     text-align: left;
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .sellAHome ul li{
     margin-bottom: .3rem;

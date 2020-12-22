@@ -469,6 +469,9 @@ h3 {
     width: 100% !important;
     text-align: left !important;
   }
+  .Sp-box{
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 445px) {
