@@ -132,11 +132,11 @@
 
 .dot-img{
     position: absolute;
-    width: 7.8%;
+    width: 7.7%;
     height: 250px;
     background: url(../../Images/dot-pattern.png) no-repeat center center/cover;
     right: 0;
     bottom: -45%;
     z-index: 3;
-    opacity: .5;
+    opacity: 1;
 }
