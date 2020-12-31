@@ -8,12 +8,10 @@ import { Link } from "react-router-dom"
 
 class ListingBox extends Component {
   componentDidMount() {
-    console.log("fired............")
     if (
       localStorage.getItem("listings") === null ||
       localStorage.getItem("listings") === undefined
     ) {
-      console.log("fired from didMount")
       axios
         .get("/demo")
         .then((res) => {

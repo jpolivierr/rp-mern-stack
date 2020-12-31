@@ -5,6 +5,7 @@
   align-items: center;
   background: white;
   padding: var(--div-padding);
+  padding-bottom: 8rem;
 }
 .Partner-box {
   width: var(--width);

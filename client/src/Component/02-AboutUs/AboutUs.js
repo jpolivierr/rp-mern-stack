@@ -25,10 +25,9 @@ function Aboutus() {
             to="/about"
             style={{ textDecoration: "none", display: "inline-block" }}
           >
-            <span className="link">Read more.. &nbsp; &nbsp; </span>
+            <span className="link">Read more. &nbsp; &nbsp; </span>
           </Link>
         </p>
-        
       </div>
       <div className="dot-img"></div>
     </div>

@@ -18,6 +18,10 @@
     /* padding: 7rem 0px; */
 }
 
+.AboutUs-main-section .link {
+    padding: 0 !important;
+}
+
 .AboutUs-main-section h2{
     position: relative;
     transform: translateY(40%);
@@ -25,7 +29,7 @@
 }
 
 .AboutUs-main-section p{
-    border-left: 1px solid silver;
+    border-left: 1px solid rgba(192, 192, 192, 0.479);
     padding-left: 3rem;
     width: 60%;
 }
@@ -132,11 +136,12 @@
 
 .dot-img{
     position: absolute;
-    width: 7.7%;
+    width: 7.8%;
     height: 250px;
+    max-width: 125px;
     background: url(../../Images/dot-pattern.png) no-repeat center center/cover;
     right: 0;
-    bottom: -45%;
+    bottom: -30%;
     z-index: 3;
     opacity: 1;
 }

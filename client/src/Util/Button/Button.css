@@ -19,6 +19,7 @@
     transform: translateY(0px);
     outline: none;
     font-weight: bold !important;
+    font-size: .9rem;
     position: relative;
     margin-top: 1rem;
     
@@ -63,6 +64,7 @@
     position: relative;
     height: 100%;
     padding: .6rem 2rem;
+    font-size: .8rem;
 }
 
 .advanced:hover{

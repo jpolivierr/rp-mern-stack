@@ -25,10 +25,10 @@ function Showcase() {
           <h1>
           Reviving Homes, <br />Restoring  Communities
         </h1>
-        <Link to="/about">
+        <Link to="/properties">
             <Button
               type="main"
-              label="Learn More"
+              label="VIEW PROPERTIES"
               color="white"
               backcolor="var(--main-color)"
             />
