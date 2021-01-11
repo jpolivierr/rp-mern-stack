@@ -57,6 +57,7 @@ p {
 
 a {
   outline: none;
+  text-decoration: none;
 }
 
 button {
@@ -367,7 +368,7 @@ h3 {
     align-items: center;
   }
   .logoimg2-in-nav-light, .logoimg2-in-nav {
-    width: 6rem !important;
+    width: 2rem !important;
   }
 
   .main-section-box {

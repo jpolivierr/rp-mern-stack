@@ -24,3 +24,24 @@
 .single-listing-info span{
     font-weight: bold;
 }
+
+.single-listing-page{
+   padding-top: 2rem;
+}
+
+.lising-button{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: white;
+    padding: 1rem 2rem;
+    width: 180px;
+    margin: 0rem auto;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.url-link{
+    color: rgb(66, 66, 248);
+    cursor: pointer;
+    display: inline;
+}

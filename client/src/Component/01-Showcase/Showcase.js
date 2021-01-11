@@ -11,7 +11,7 @@ function Showcase() {
       <div className="side-nav">
         <div className="social-nav">
           <i className="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}}></i>
-          <i className="fab fa-instagram"onClick={()=>{window.open('https://www.instagram.com/')}}></i>
+          <i className="fab fa-instagram"onClick={()=>{window.open('https://www.instagram.com/resurrectingpropertiesllc/')}}></i>
         </div>
         <span>
           SCROLL DOWN <i className="fas fa-chevron-right"></i>

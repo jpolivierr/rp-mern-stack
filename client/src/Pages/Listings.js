@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import PageHeader from "../Component/00-PageHeader/PageHeader"
-import Specialty from "../Component/06-Specialty/Specialty"
 import Contact from "../Component/08-Contact/Contact"
 import ListingBox from "../Component/00-ListingBox/ListingBox"
 import Search from "../Component/00-Search/Search"
@@ -30,7 +29,7 @@ class Listings extends Component {
             <NavigationCopy truemodal={this.openModal} Position=""/>
           {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
         <PageHeader label=" properties" />
-        <div className="Listing">
+        <div className="Listing lising-on-page">
           <div className="Listing-box">
             <Search onPageSearch="on-Page-Search" />
             <ListingBox />
@@ -41,7 +40,6 @@ class Listings extends Component {
             </Link>
           </div>
         </div>
-        <Specialty />
         <Contact />
       </div>
     )

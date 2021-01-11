@@ -37,20 +37,7 @@ function Footer() {
             <li>786.526.8897</li>
           </ul>
         </div>
-        <div className="F  Partners-link">
-          <h3>Partners</h3>
-          <ul>
-            <Link style={{ textDecoration: "none" }} to="/partners">
-              <li>Realtor</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/partners">
-              <li>Investor</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/partners">
-              <li>Contractor</li>
-            </Link>
-          </ul>
-        </div>
+    
         <div className="F newsLetter">
           <h3>JOIN OUR NEWS LETTER</h3>
           <form className='newLetter-form' action="">
@@ -66,8 +53,7 @@ function Footer() {
       <div className="bottom-footer">
         <div className="container">
           <div className="Bf-box">
-            Copyright© 2020. All rights reserved. | Terms of Use | <br />
-            Privacy Policy | Dont Our Personal Information
+            © Copyright 2021 Resurrectingproperties. All Rights Reserved. Design by Appvenir.
           </div>
         </div>
       </div>
