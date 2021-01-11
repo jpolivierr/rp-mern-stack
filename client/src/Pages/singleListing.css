@@ -29,15 +29,19 @@
    padding-top: 2rem;
 }
 
-.lising-button{
+.lising-buttons{
     color: var(--main-color);
     border: 1px solid var(--main-color);
     background-color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     width: 180px;
+    max-height: 52px;
     margin: 0rem auto;
     margin-bottom: 4rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .url-link{

@@ -61,7 +61,7 @@ class singleListings extends Component {
         {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
         <PageHeader label=" properties" />
         <div className="Listing single-listing-page">
-          <Link to="/properties" className="lising-button" >
+          <Link to="/properties" className="lising-buttons" >
             Back To Properties
           </Link>
           <div className="single-listing">

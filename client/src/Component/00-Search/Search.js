@@ -98,7 +98,17 @@ class Search extends Component {
     })
 
     return (
-      <div className={`Search ${this.props.onPageSearch}`}>
+      <form onSubmit = {() => this.getListings()}
+      label = {loading === false ? 'SEARCH' : ''}
+    type="advance"
+    loader={
+      loading === false ? (
+        ""
+      ) : (
+        <div class="lds-dual-ring"></div>
+      )
+    }
+    loaderbk={loading === false ? "" : "loader"} className={`Search ${this.props.onPageSearch}`}>
         <div className="noResult">{this.state.noResultError}</div>
 
         <h3>Property Search</h3>
@@ -184,7 +194,6 @@ class Search extends Component {
           </div>
 
           <Button
-            clicked={() => this.getListings()}
               label = {loading === false ? 'SEARCH' : ''}
             type="advance"
             loader={
@@ -197,7 +206,7 @@ class Search extends Component {
             loaderbk={loading === false ? "" : "loader"}
           />
         </div>
-      </div>
+      </form>
     )
   }
 }

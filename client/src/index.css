@@ -474,6 +474,20 @@ h3 {
   .Sp-box {
     margin-bottom: 4rem;
   }
+  
+  .single-listing{
+    display: flex !important;
+    flex-flow: column !important;
+  }
+  .single-listing-img{
+    width: 100% !important;
+    height: 25rem !important;
+  }
+  .single-listing-info{
+    margin-top: 2rem;
+    padding-left: 0 !important;
+  }
+
 }
 
 @media (max-width: 445px) {
