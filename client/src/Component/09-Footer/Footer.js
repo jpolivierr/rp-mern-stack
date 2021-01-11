@@ -33,7 +33,7 @@ function Footer() {
           <h3>Contact</h3>
           <ul>
             <li>145 NW 13th st Miami, FL 33168</li>
-            <li>info@resurrectingproperties.com</li>
+            <li>contact@resurrectingproperties.com </li>
             <li>786.526.8897</li>
           </ul>
         </div>

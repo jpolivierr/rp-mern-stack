@@ -35,30 +35,29 @@
 .social-nav{
   display: flex;
   flex-flow: column;
-  /* border: 1px solid red; */
   position: relative;
 }
 .social-nav::before{
   position: absolute;
   content: '';
   width: 1px;
-  height: 4rem;
+  height: 3rem;
   background: var(--social-color);
   left: 0;
   right: 0;
   margin: auto;
-  top: -50%;
+  top: -80%;
 }
 .social-nav::after{
   position: absolute;
   content: '';
   width: 1px;
-  height: 4rem;
+  height: 3rem;
   background: var(--social-color);
   left: 0;
   right: 0;
   margin: auto;
-  bottom: -50%;
+  bottom: -80%;
 }
 
 .social-nav i{

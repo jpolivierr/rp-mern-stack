@@ -12,8 +12,6 @@ function Showcase() {
         <div className="social-nav">
           <i className="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}}></i>
           <i className="fab fa-instagram"onClick={()=>{window.open('https://www.instagram.com/')}}></i>
-          <i className="fab fa-linkedin-in" onClick={()=>{window.open('https://www.linkedin.com/')}}></i>
-          <i className="fab fa-twitter" onClick={()=>{window.open('https://www.twitter.com/')}}></i>
         </div>
         <span>
           SCROLL DOWN <i className="fas fa-chevron-right"></i>

@@ -52,14 +52,12 @@ class Modal extends Component {
                 <ul className="side-contact">
                     <li>142 Nw 13th ct Miami, Fl, 33164</li>
                     <li>786-589-8898</li>
-                    <li>info@resurectingproperties.com</li>
+                    <li>contact@resurrectingproperties.com </li>
                 </ul>
-                <h3>Social</h3>
+                <h3>Social Media</h3>
                 <ul className="side-social">
                     <i className="fab fa-facebook-f" onClick={()=>{window.open('https://www.facebook.com/resurrectingpropertiesllc/')}} ></i>
-                      <i className="fab fa-instagram" onClick={()=>{window.open('')}}></i>
-                      <i className="fab fa-twitter"></i>
-                      <i className="fab fa-linkedin-in"></i>
+                      <i className="fab fa-instagram" onClick={()=>{window.open('https://www.instagram.com/resurrectingpropertiesllc/')}}></i>
                 </ul>
             </div>
         </div>

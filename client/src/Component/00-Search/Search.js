@@ -78,7 +78,7 @@ class Search extends Component {
       "$700,000",
       "$800,000",
       "$900,000",
-      "$1000,000",
+      "$1,000,000",
     ]
     const number = [1, 2, 3, 4, 5, 6, 7, 8, 10]
     const loading = this.props.loading.loading
@@ -165,7 +165,7 @@ class Search extends Component {
                 this.setState({ ...this.state, minPrice: e.target.value })
               }
             >
-              <option value="MIN.price">MIN.price</option>
+              <option value="MIN.price">MIN Price</option>
               {displayPrices}
             </select>
           </div>
@@ -178,7 +178,7 @@ class Search extends Component {
                 this.setState({ ...this.state, maxPrice: e.target.value })
               }
             >
-              <option value="MAX.price">MAX.price</option>
+              <option value="MAX.price">MAX Price</option>
               {displayPrices}
             </select>
           </div>

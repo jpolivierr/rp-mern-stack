@@ -21,7 +21,6 @@ app.use("/", require("./routes/api/demoProp"))
 app.use("/properties/", require("./routes/api/properties"))
 app.use("/client/", require("./routes/api/client"))
 
-
 log(path.join(__dirname, "client/build"))
 app.use(express.static(path.join(__dirname, "client/build")))
 app.get("*", (req, res) => {
@@ -30,8 +29,6 @@ app.get("*", (req, res) => {
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
-
-  
 }
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))

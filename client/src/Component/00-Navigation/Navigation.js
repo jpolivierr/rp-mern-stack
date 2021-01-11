@@ -98,7 +98,7 @@ class Navigation extends Component {
         emailstyle: {
           on: true,
           stylename: "drop-email",
-          email: "info@resurrectingproperties.com",
+          email: "contact@resurrectingproperties.com ",
         },
       })
     }else if(this.state.emailstyle.on === true){
@@ -127,8 +127,8 @@ class Navigation extends Component {
             <div className={`${this.state.logoInNav} logoimg2-in-nav-light`}></div>
           </div>
           <ul className={`links ${this.state.links}`}>
-            <Link style={{ textDecoration: "none" }} to="/">
-              <li onClick={() => this.resetNav()}> Home </li>
+            <Link className = 'active' style={{ textDecoration: "none" }} to="/">
+              <li className= 'active-link' onClick={() => this.resetNav()}> Home </li>
             </Link>
             <Link style={{ textDecoration: "none" }} to="/about">
               <li>About Us</li>

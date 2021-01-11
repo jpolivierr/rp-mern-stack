@@ -4,6 +4,8 @@
   flex-flow: column;
   justify-content: center;
   padding: var(--div-padding);
+  background-color: white !important;
+
 }
 
 .Listing-box {
