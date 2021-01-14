@@ -75,3 +75,7 @@
     border: none;
     padding: .5rem 0rem;
 }
+
+.email-link{
+    color: rgb(74, 74, 255);
+}

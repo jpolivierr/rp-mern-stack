@@ -18,6 +18,9 @@ class singleListings extends Component {
     })
     this.setState({ ...this.state, listingInfo: foundListing })
   }
+  componentDidUpdate(){
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
   state = {
     listingInfo: {},
     modal: false,

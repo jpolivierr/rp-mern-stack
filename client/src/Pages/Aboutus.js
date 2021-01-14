@@ -13,6 +13,12 @@ class Aboutus extends Component {
     }
     scroll()
   }
+  componentDidUpdate(){
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+  shouldComponentUpdate() {
+    return false;
+  }
   state = {
     modal: false,
     navbar: false,

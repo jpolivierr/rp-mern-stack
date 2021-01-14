@@ -18,6 +18,9 @@ class Home extends Component {
     }
     scroll()
   }
+  componentDidUpdate(){
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
   state = {
     modal: false,
     navbar: false,

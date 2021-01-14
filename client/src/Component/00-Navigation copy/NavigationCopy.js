@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import { Component } from "react"
-import { withRouter } from "react-router-dom"
+import { withRouter, NavLink } from "react-router-dom"
 
 class NavigationCopy extends Component {
   state = {
@@ -45,27 +44,7 @@ class NavigationCopy extends Component {
       })
     }
   }
-  showEmail = () => {
-    if (this.state.emailstyle.on === false) {
-      this.setState({
-        ...this.state,
-        emailstyle: {
-          on: true,
-          stylename: "drop-email",
-          email: "info@resurrectingproperties.com",
-        },
-      })
-    } else if (this.state.emailstyle.on === true) {
-      this.setState({
-        ...this.state,
-        emailstyle: {
-          on: false,
-          stylename: "",
-          email: "",
-        },
-      })
-    }
-  }
+
   handleClick = () => {
     this.props.history.push("/")
   }
@@ -81,24 +60,24 @@ class NavigationCopy extends Component {
             <div className="logoimg2-in-nav"></div>
           </div>
           <ul className={`links ${this.state.links}`}>
-            <Link style={{ textDecoration: "none" }} to="/">
+            <NavLink style={{ textDecoration: "none" }} to="/" >
               <li > Home </li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/about">
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/about" activeClassName="active-link">
               <li>About Us</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/sellahome">
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/sellahome" activeClassName="active-link">
               <li>Sell A Home</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/properties">
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/properties" activeClassName="active-link">
               <li>Properties</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/partners">
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/partners" activeClassName="active-link">
               <li>Our Partners</li>
-            </Link>
-            <Link style={{ textDecoration: "none" }} to="/contact">
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/contact" activeClassName="active-link">
               <li>Contact</li>
-            </Link>
+            </NavLink>
           </ul>
           <ul className={`socials ${this.state.icon}`}>
             <li>
@@ -127,21 +106,16 @@ class NavigationCopy extends Component {
                 {`${this.state.phonestyle.number}`}
               </div>
             </li>
-            <li className=" li-email">
-              <i
-                className="fas fa-envelope"
-                onClick={() => {
-                  this.showEmail()
-                }}
-              ></i>
-              <div
+            <li className=" li-email" >
+              <a href="mailto:contact@resurrectingproperties.com "><i className="fas fa-envelope" ></i> </a>
+              {/* <div
                 className={`${this.state.emailstyle.stylename} my-email`}
                 onClick={() => {
                   this.showEmail()
                 }}
               >
                 {`${this.state.emailstyle.email}`}
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>

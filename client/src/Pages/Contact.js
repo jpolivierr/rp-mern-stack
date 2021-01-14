@@ -12,7 +12,9 @@ import NavigationCopy from '../Component/00-Navigation copy/NavigationCopy'
         }
         scroll()
     }
-
+    componentDidUpdate(){
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
     state = {
         modal: false,
         navbar: false,

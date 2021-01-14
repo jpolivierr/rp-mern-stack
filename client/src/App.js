@@ -34,10 +34,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}
-            {/* <Navigation truemodal={this.openModal} Position="" /> */}
-            {/* <NavigationCopy truemodal={this.openModal} Position=""/> */}
-            
+            {this.state.modal ? <Modal closemodal={this.closeModal} /> : null}        
             <Switch>
               <Route path="/about" exact component={Aboutus} />
               <Route path="/properties" exact component={Listings} />

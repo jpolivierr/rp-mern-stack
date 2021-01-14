@@ -33,7 +33,8 @@ function Footer() {
           <h3>Contact</h3>
           <ul>
             <li>145 NW 13th st Miami, FL 33168</li>
-            <li>contact@resurrectingproperties.com </li>
+            <li><a className='email-link' href="mailto:contact@resurrectingproperties.com ">contact@resurrectingproperties.com </a></li>
+            
             <li>786.526.8897</li>
           </ul>
         </div>
@@ -44,7 +45,7 @@ function Footer() {
             <input type="text" placeholder="First Name" />
             <input type="text" placeholder="Last Name" />
             <input type="text" placeholder="Email" />
-            <button>SUBMIT</button>
+            <button style={{cursor: 'pointer'}}>SUBMIT</button>
           </form>
           
         </div>

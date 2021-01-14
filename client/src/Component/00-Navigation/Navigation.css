@@ -13,7 +13,8 @@
 .dark-nav {
   background-color: rgb(255, 255, 255);
   transition: all 0.3s ease-in-out;
-  border-bottom: 1px solid silver;
+  /* border-bottom: 1px solid silver; */
+  box-shadow: 0px -20px 30px 10px rgba(90, 90, 90, 0.342);
 }
 .light-nav {
   background-color: rgba(27, 27, 27, 0);
@@ -115,7 +116,17 @@
 }
 
  .active-link {
-   border-bottom: 1px solid red;
+   border-bottom: 3px solid var(--main-color);
+   animation: linkup .5s linear forwards;
+}
+@keyframes linkup {
+  
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .Navigation .links li:hover {
