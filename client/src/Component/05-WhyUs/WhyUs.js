@@ -21,18 +21,18 @@ function WhyUs() {
           <ul>
             <li>
               <i className="fas fa-check"></i>Keeping the project within the
-              estimated deadline.
+              estimated deadline
             </li>
             <li>
               <i className="fas fa-check"></i>Maintaining a highly efficient
-              communication with our clients.
+              communication with our clients
             </li>
             <li>
               <i className="fas fa-check"></i>Finding creative solutions to
-              unexpected problems.
+              unexpected problems
             </li>
             <li>
-              <i className="fas fa-check"></i>Keeping the quality standard to a high level.
+              <i className="fas fa-check"></i>Keeping the quality standard to a high level
             </li>
             {/* <li><i className="fas fa-check"></i>Keeping the quality standard to a high level;</li> */}
           </ul>

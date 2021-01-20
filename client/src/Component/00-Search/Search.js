@@ -17,24 +17,26 @@ class Search extends Component {
     maxPrice: "",
     cs_error: "",
     noResultError: "",
-    no_city_error: ''
+    no_city_error: "",
   }
 
   handleClick = () => {
     this.props.history.push("/properties")
   }
 
-  getListings = () => {
+  getListingss = (e) => {
+    e.preventDefault()
     this.setState({ ...this.state, cs_error: "" })
     this.props.setloading(true)
     const config = {
       headers: { "Content-Type": "application/json" },
     }
     const body = JSON.stringify(this.state)
+    
     axios
       .post("/properties", body, config)
       .then((res) => {
-        this.handleClick()
+        
         if (res.data.listings.length === 0) {
           this.setState({
             ...this.state,
@@ -45,6 +47,7 @@ class Search extends Component {
           this.setState({ ...this.state, noResultError: "" })
           localStorage.setItem("listings", JSON.stringify(res.data.listings))
           this.props.setloading(false)
+          this.handleClick()
         }
       })
       .catch((err) => {
@@ -98,22 +101,19 @@ class Search extends Component {
     })
 
     return (
-      <form onSubmit = {() => this.getListings()}
-      label = {loading === false ? 'SEARCH' : ''}
-    type="advance"
-    loader={
-      loading === false ? (
-        ""
-      ) : (
-        <div class="lds-dual-ring"></div>
-      )
-    }
-    loaderbk={loading === false ? "" : "loader"} className={`Search ${this.props.onPageSearch}`}>
+      <form
+        onSubmit={(e) => this.getListingss(e)}
+        label={loading === false ? "SEARCH" : ""}
+        type="advance"
+        loader={loading === false ? "" : <div className="lds-dual-ring"></div>}
+        loaderbk={loading === false ? "" : "loader"}
+        className={`Search ${this.props.onPageSearch}`}
+      >
         <div className="noResult">{this.state.noResultError}</div>
 
         <h3>Property Search</h3>
 
-        <div className= {`option-box ${this.state.no_city_error}`} >
+        <div className={`option-box ${this.state.no_city_error}`}>
           <input
             className=""
             type="text"
@@ -194,15 +194,9 @@ class Search extends Component {
           </div>
 
           <Button
-              label = {loading === false ? 'SEARCH' : ''}
+            label={loading === false ? "SEARCH" : ""}
             type="advance"
-            loader={
-              loading === false ? (
-                ""
-              ) : (
-                <div class="lds-dual-ring"></div>
-              )
-            }
+            loader={loading === false ? "" : <div className="lds-dual-ring"></div>}
             loaderbk={loading === false ? "" : "loader"}
           />
         </div>

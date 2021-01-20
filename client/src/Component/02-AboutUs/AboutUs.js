@@ -43,7 +43,16 @@ export class Aboutuspage extends Component {
     phone: "",
     modal: false,
     navbar: false,
-    messageSent: ''
+    messageSent: "",
+  }
+  componentDidMount() {
+    const scroll = () => {
+      window.scrollTo(0, 0)
+    }
+    scroll()
+  }
+  componentDidUpdate(){
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   formInputs = (e) => {
@@ -95,9 +104,10 @@ export class Aboutuspage extends Component {
     try {
       const res = await axios.post("/client", body, config)
       if (res.data) {
-        this.setState({messageSent: 'Message Sent! Thank you for contacting us'})
+        this.setState({
+          messageSent: "Message Sent! Thank you for contacting us",
+        })
 
-        
         classes.forEach((child) => {
           if (child.id === "serverMsg") {
             child.className = "serverMsg"
@@ -111,7 +121,7 @@ export class Aboutuspage extends Component {
               message: "",
             })
             setTimeout(() => {
-              this.setState({messageSent: ''})
+              this.setState({ messageSent: "" })
               child.className = ""
               child.innerHTML = ""
             }, 4000)
@@ -170,46 +180,44 @@ export class Aboutuspage extends Component {
             }}
           >
             <h3>Contact Us</h3>
-             <div className="success-message">
-               {this.state.messageSent}
-             </div>
+            <div className="success-message">{this.state.messageSent}</div>
             <input
-                id="fname"
-                type="text"
-                placeholder="First Name"
-                onChange={(e) => this.formInputs(e)}
-                value={this.state.fname}
-              />
-              <input
-                id="lname"
-                type="text"
-                placeholder="Last Name"
-                onChange={(e) => this.formInputs(e)}
-                value={this.state.lname}
-              />
-              <input
-                id="email"
-                type="text"
-                placeholder="Email"
-                onChange={(e) => this.formInputs(e)}
-                value={this.state.email}
-              />
-              <input
-                id="phone"
-                type="text"
-                placeholder="Phone Number (optional)"
-                onChange={(e) => this.formInputs(e)}
-                value={this.state.phone}
-              />
-              <textarea
-                onChange={(e) => this.formInputs(e)}
-                placeholder="Message"
-                name=""
-                id="message"
-                cols="3"
-                rows="0"
-                value={this.state.message}
-              ></textarea>
+              id="fname"
+              type="text"
+              placeholder="First Name"
+              onChange={(e) => this.formInputs(e)}
+              value={this.state.fname}
+            />
+            <input
+              id="lname"
+              type="text"
+              placeholder="Last Name"
+              onChange={(e) => this.formInputs(e)}
+              value={this.state.lname}
+            />
+            <input
+              id="email"
+              type="text"
+              placeholder="Email"
+              onChange={(e) => this.formInputs(e)}
+              value={this.state.email}
+            />
+            <input
+              id="phone"
+              type="text"
+              placeholder="Phone Number (optional)"
+              onChange={(e) => this.formInputs(e)}
+              value={this.state.phone}
+            />
+            <textarea
+              onChange={(e) => this.formInputs(e)}
+              placeholder="Message"
+              name=""
+              id="message"
+              cols="3"
+              rows="0"
+              value={this.state.message}
+            ></textarea>
             <button>SUBMIT</button>
             <div id="serverMsg" className=""></div>
           </form>

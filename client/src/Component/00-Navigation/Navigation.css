@@ -112,12 +112,13 @@
 .Navigation .links a {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 12vh;
 }
 
  .active-link {
    border-bottom: 3px solid var(--main-color);
    animation: linkup .5s linear forwards;
+   height: 100%;
 }
 @keyframes linkup {
   
